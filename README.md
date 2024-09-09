@@ -2,6 +2,10 @@
 
 This repository contains an mdbook on Miden protocol research. The book aims to provide comprehensive information and insights into the Miden protocol.
 
+## Live website
+
+You can find a live website of the Miden research book [here](https://phklive.github.io/miden-research/)
+
 ## Running the mdbook
 
 To run the mdbook locally, follow these steps:
@@ -50,4 +54,4 @@ We welcome contributions to this research. Please feel free to submit pull reque
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the [MIT License](LICENSE).
