@@ -1,6 +1,6 @@
 # Miden Research
 
-This repository contains an mdbook on Miden protocol research. The book aims to provide comprehensive information and insights into the Miden protocol.
+This repository contains an mdbook on Miden research. The book aims to provide insights into the future of the Miden protocol.
 
 ## Live website
 
