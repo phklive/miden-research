@@ -1,4 +1,4 @@
-# Private Payments
+# Private Payment
 
 ## Introduction
 

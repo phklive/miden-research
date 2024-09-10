@@ -1,21 +1,19 @@
 # Summary
 
-- [Introduction](introduction.md)
+[Introduction](introduction.md)
 
-- [Novel Applications](novel_applications/README.md)
+# Novel Applications
+- [Introduction](novel_applications/README.md)
+- [Payment]()
+  - [Private payment](novel_applications/payment/private_payment.md)
+  - [n-to-1 payment](novel_applications/payment/n-to-1_payment.md)
+- [Identity]()
+  - [Miden name service](novel_applications/identity/miden_name_service.md)
 
-    - [Private payment](novel_applications/private_payment.md)
-
-- [Tutorials](tutorials/README.md)
-
-  - [Installation](tutorials/installation.md)
-
-  - [First Steps](tutorials/first_steps.md)
-
-  - [User Tutorials](tutorials/user/README.md)
-
-    - [Your First Miden Transaction](tutorials/user/first_miden_transaction.md)
-
-  - [Developer Tutorials](tutorials/developer/README.md)
-
-    - [Deploy a Faucet on Miden](tutorials/developer/deploy_faucet.md)
+# Tutorials
+- [Philosophy](tutorials/README.md)
+- [Installation](tutorials/installation.md)
+- [User Tutorials](tutorials/user/README.md)
+  - [Your First Miden Transaction](tutorials/user/first_miden_transaction.md)
+- [Developer Tutorials](tutorials/developer/README.md)
+  - [Deploy a Faucet on Miden](tutorials/developer/deploy_faucet.md)
