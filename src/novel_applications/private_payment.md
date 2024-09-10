@@ -51,4 +51,37 @@ Privacy-preserving payment systems empower users to transact freely without fear
 
 ### What about current private decentralized systems?
 
+We already have existing decentralized privacy preserving protocols as of time of writing, being [Zcash](https://z.cash) and [Monero](https://getmonero.org), hence why would we need other systems?:
+
+1. Lack of stable assets
+
+Zcash and Monero respectively and exclusively use the `ZEC` and `XMR` tokens meaning that widely used stablecoins like `USDC`, `USDT` and others can't be ported and used on such blockchains. The lack of stable assets pegged to an existing currency hinders the ability of users to pay and get paid for "real world" goods and services, hence preventing those systems from becoming widely adopted payment solutions and replacing current payments infrastructure.
+
+2. Expensive payments
+
+The average transaction fee of these blockchains as of time of writing is:
+
+- On Zcash: $0.023
+- On Monero: $0.061
+
+Although being a few cents these transaction fees are still too high by orders of magnitude to compete with classical payment systems or existing blockchain rollups, pushing the average user to transact on those systems.
+
+3. Lack of programmability
+
+Zcash and Monero are blockchains focused on payments, they do not provide a virtual machine enabling computation like Ethereum. This lack of programmability prevents the innovations that we have seen throuhgout the years with the development of smart contracts and other protocols making payments more efficient and powerful.
+
+4. Bad user experience
+
+Most payments for general purpose blockchains must be made through browser wallets or cold wallet interfaces, which do not provide a compelling user interface and experience compared to existing banking apps like Venmo, Paypal or Revolut. It is nonetheless important to note that attempts have been made e.g. [Zashi](https://z.cash/ecosystem/zashi-wallet/).
+
+I believe that Miden can solve these issues, let me show you how.
+
 ## Miden an improved payments infrastructure
+
+Given the limitations of existing blockchains and payments infrastructure, both public and privacy-focused, there is a clear need for a solution that combines privacy, efficiency and functionality. This is where Miden enters the picture.
+
+In the following sections we'll explore how the Miden protocol addresses each of the key issues identified in current systems and how it could be used to build a better future.
+
+### One
+### Two
+### Three
