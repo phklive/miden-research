@@ -196,6 +196,7 @@
 <h3 id="identity"><a class="header" href="#identity">Identity</a></h3>
 <ul>
 <li><a href="novel_applications/">Identity proofs</a></li>
+<li><a href="novel_applications/">Miden name service</a></li>
 <li><a href="novel_applications/">ZK KYC</a></li>
 </ul>
 <h3 id="compliance"><a class="header" href="#compliance">Compliance</a></h3>
@@ -211,7 +212,8 @@
 <div class="table-wrapper"><table><thead><tr><th>Blockchain</th><th>Bitcoin</th><th>Ethereum</th><th>Polygon</th><th>Base</th></tr></thead><tbody>
 <tr><td>Avg. tx fee ($)</td><td>0.68</td><td>1.85</td><td>0.003</td><td>0.00005</td></tr>
 <tr><td>Cost</td><td>High</td><td>High</td><td>Low</td><td>Virtually free</td></tr>
-<tr><td>UX</td><td>Bad</td><td>Bad</td><td>Bad</td><td>Average</td></tr>
+<tr><td>Speed</td><td>Low</td><td>Low</td><td>High</td><td>High</td></tr>
+<tr><td>UX</td><td>Poor</td><td>Poor</td><td>Poor</td><td>Average</td></tr>
 <tr><td>Network</td><td>Decentralized</td><td>Decentralized</td><td>Less decentralized</td><td>Centralized</td></tr>
 <tr><td>Privacy</td><td>None</td><td>None</td><td>None</td><td>None</td></tr>
 </tbody></table>
@@ -282,12 +284,27 @@
 <p>Most payments for general purpose blockchains must be made through browser wallets or cold wallet interfaces, which do not provide a compelling user interface and experience compared to existing banking apps like Venmo, Paypal or Revolut. It is nonetheless important to note that attempts have been made e.g. <a href="https://z.cash/ecosystem/zashi-wallet/">Zashi</a>.</p>
 <p>I believe that Miden can solve these issues, let me show you how.</p>
 <h2 id="miden-an-improved-payments-infrastructure"><a class="header" href="#miden-an-improved-payments-infrastructure">Miden an improved payments infrastructure</a></h2>
-<p>Given the limitations of existing blockchains and payments infrastructure, both public and privacy-focused, there is a clear need for a solution that combines privacy, efficiency and functionality. This is where Miden enters the picture.</p>
-<p>In the following sections we'll explore how the Miden protocol addresses each of the key issues identified in current systems and how it could be used to build a better future.</p>
-<h3 id="one"><a class="header" href="#one">One</a></h3>
-<h3 id="two"><a class="header" href="#two">Two</a></h3>
-<h3 id="three"><a class="header" href="#three">Three</a></h3>
+<p>Given the limitations of existing blockchains and payments infrastructure, both public and privacy-focused, there is a clear need for a solution that combines privacy, efficiency and functionality. This is where Miden enters the picture, by building on the foundational work around privacy of projects like Zcash and Monero and around computation of a project like Ethereum, while also incorporating lessons learned from scalable solutions like rollups, Miden presents a promising approach towards building a more ideal payments infrastructure.</p>
+<p>The Miden protocol gives us the best of all worlds by addressing each of the key issues identified in current systems:</p>
+<div class="table-wrapper"><table><thead><tr><th>Aspect</th><th>Current Systems</th><th>Miden</th></tr></thead><tbody>
+<tr><td>Network Structure</td><td>Centralized</td><td>Decentralized (On the roadmap)</td></tr>
+<tr><td>Asset Support</td><td>Lack of stable assets</td><td>Arbitrary assets</td></tr>
+<tr><td>Programmability</td><td>Lack of programmability</td><td>Turing complete VM</td></tr>
+<tr><td>Privacy</td><td>Public</td><td>Private</td></tr>
+<tr><td>Cost</td><td>Expensive</td><td>Cheap</td></tr>
+<tr><td>Speed</td><td>Slow</td><td>Fast</td></tr>
+<tr><td>User Experience</td><td>Poor UX</td><td>Abstracted UX (Applications)</td></tr>
+</tbody></table>
+</div>
+<h3 id="the-miden-protocol"><a class="header" href="#the-miden-protocol">The Miden protocol</a></h3>
+<h4 id="peer-to-peer-private-payments"><a class="header" href="#peer-to-peer-private-payments">Peer-to-peer private payments</a></h4>
+<h4 id="account-abstraction"><a class="header" href="#account-abstraction">Account abstraction</a></h4>
+<h4 id="privacy-scales-better"><a class="header" href="#privacy-scales-better">Privacy scales better</a></h4>
+<h2 id="the-vision-for-a-powerful-payments-app-on-miden"><a class="header" href="#the-vision-for-a-powerful-payments-app-on-miden">The vision for a powerful payments app on Miden</a></h2>
+<p>Leveraging the Miden primitives mentioned above, we can imagine a powerful payments app that would combine privacy, fast and cheap payments, a stunning user interface, easy to use for a great user experience while being fully permissionless and decentralized.</p>
+<h2 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h2>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="tutorials"><a class="header" href="#tutorials">Tutorials</a></h1>
+<p>Our tutorials help users and developers get accustomed with the usage of the Miden protocol. Following is our philosophy around tutorial building.</p>
 <h2 id="why-build-tutorials"><a class="header" href="#why-build-tutorials">Why build tutorials?</a></h2>
 <p>Tutorials enable the fast transfer of knowledge from one group of individuals to another. In our case, from the Miden core developers to potential users or contributors/developers. Tutorials, if done correctly, can be an effective way to speed up the onboarding of target audiences and foster ecosystem growth. On the other hand, tutorials, if poorly realized, can be a source of frustration and lead to loss of target audience.</p>
 <h3 id="tutorials-in-blockchain"><a class="header" href="#tutorials-in-blockchain">Tutorials in blockchain?</a></h3>

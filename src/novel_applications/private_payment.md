@@ -14,7 +14,8 @@ Since the very first blockchain, Bitcoin, payments have been the flagship use ca
 |------------|---------|----------|---------|------|
 | Avg. tx fee ($) | 0.68 | 1.85 | 0.003 | 0.00005 |
 | Cost | High | High | Low | Virtually free |
-| UX | Bad | Bad | Bad | Average |
+| Speed | Low | Low | High | High | 
+| UX | Poor | Poor | Poor | Average |
 | Network | Decentralized | Decentralized | Less decentralized | Centralized |
 | Privacy | None | None | None | None |
 
@@ -78,10 +79,30 @@ I believe that Miden can solve these issues, let me show you how.
 
 ## Miden an improved payments infrastructure
 
-Given the limitations of existing blockchains and payments infrastructure, both public and privacy-focused, there is a clear need for a solution that combines privacy, efficiency and functionality. This is where Miden enters the picture.
+Given the limitations of existing blockchains and payments infrastructure, both public and privacy-focused, there is a clear need for a solution that combines privacy, efficiency and functionality. This is where Miden enters the picture, by building on the foundational work around privacy of projects like Zcash and Monero and around computation of a project like Ethereum, while also incorporating lessons learned from scalable solutions like rollups, Miden presents a promising approach towards building a more ideal payments infrastructure.
 
-In the following sections we'll explore how the Miden protocol addresses each of the key issues identified in current systems and how it could be used to build a better future.
+The Miden protocol gives us the best of all worlds by addressing each of the key issues identified in current systems: 
 
-### One
-### Two
-### Three
+| Aspect | Current Systems | Miden |
+|--------|-----------------|-------|
+| Network Structure | Centralized | Decentralized (On the roadmap) |
+| Asset Support | Lack of stable assets | Arbitrary assets |
+| Programmability | Lack of programmability | Turing complete VM |
+| Privacy | Public | Private |
+| Cost | Expensive | Cheap |
+| Speed | Slow | Fast |
+| User Experience | Poor UX | Abstracted UX (Applications) |
+
+### The Miden protocol
+
+#### Peer-to-peer private payments
+
+#### Account abstraction
+
+#### Privacy scales better
+
+## The vision for a powerful payments app on Miden
+
+Leveraging the Miden primitives mentioned above, we can imagine a powerful payments app that would combine privacy, fast and cheap payments, a stunning user interface, easy to use for a great user experience while being fully permissionless and decentralized.
+
+## Conclusion
