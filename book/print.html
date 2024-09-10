@@ -89,7 +89,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="novel_applications/index.html"><strong aria-hidden="true">2.</strong> Novel Applications</a></li><li class="chapter-item expanded "><a href="tutorials/index.html"><strong aria-hidden="true">3.</strong> Tutorials</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tutorials/installation.html"><strong aria-hidden="true">3.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="tutorials/first_steps.html"><strong aria-hidden="true">3.2.</strong> First Steps</a></li><li class="chapter-item expanded "><a href="tutorials/user/index.html"><strong aria-hidden="true">3.3.</strong> User Tutorials</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tutorials/user/first_miden_transaction.html"><strong aria-hidden="true">3.3.1.</strong> Your First Miden Transaction</a></li></ol></li><li class="chapter-item expanded "><a href="tutorials/developer/index.html"><strong aria-hidden="true">3.4.</strong> Developer Tutorials</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tutorials/developer/deploy_faucet.html"><strong aria-hidden="true">3.4.1.</strong> Deploy a Faucet on Miden</a></li></ol></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="novel_applications/index.html"><strong aria-hidden="true">2.</strong> Novel Applications</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="novel_applications/private_payment.html"><strong aria-hidden="true">2.1.</strong> Private payment</a></li></ol></li><li class="chapter-item expanded "><a href="tutorials/index.html"><strong aria-hidden="true">3.</strong> Tutorials</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tutorials/installation.html"><strong aria-hidden="true">3.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="tutorials/first_steps.html"><strong aria-hidden="true">3.2.</strong> First Steps</a></li><li class="chapter-item expanded "><a href="tutorials/user/index.html"><strong aria-hidden="true">3.3.</strong> User Tutorials</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tutorials/user/first_miden_transaction.html"><strong aria-hidden="true">3.3.1.</strong> Your First Miden Transaction</a></li></ol></li><li class="chapter-item expanded "><a href="tutorials/developer/index.html"><strong aria-hidden="true">3.4.</strong> Developer Tutorials</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tutorials/developer/deploy_faucet.html"><strong aria-hidden="true">3.4.1.</strong> Deploy a Faucet on Miden</a></li></ol></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -178,10 +178,10 @@
 <div style="break-before: page; page-break-before: always;"></div><h1 id="novel-applications"><a class="header" href="#novel-applications">Novel Applications</a></h1>
 <p>Leveraging Miden's novel architecture opens the door to a plethora of innovative applications that were previously impossible on Ethereum or other EVM-based blockchains. In this discussion, we aim to list different proofs of concept (PoC's) for such applications.</p>
 <p><img src="novel_applications/../assets/images/novel_ideas.jpeg" alt="Novel applications" /></p>
-<h3 id="payments"><a class="header" href="#payments">Payments</a></h3>
+<h3 id="payment"><a class="header" href="#payment">Payment</a></h3>
 <ul>
-<li><a href="novel_applications/">Private parallel payment</a></li>
-<li><a href="novel_applications/">n-1 payments</a></li>
+<li><a href="novel_applications/./private_payment.html">Private payment</a></li>
+<li><a href="novel_applications/">n-1 payment</a></li>
 </ul>
 <h3 id="defi"><a class="header" href="#defi">Defi</a></h3>
 <ul>
@@ -202,6 +202,63 @@
 <ul>
 <li><a href="novel_applications/">Private provable compliance</a></li>
 </ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="private-payments"><a class="header" href="#private-payments">Private Payments</a></h1>
+<h2 id="introduction-1"><a class="header" href="#introduction-1">Introduction</a></h2>
+<h3 id="the-importance-of-payments"><a class="header" href="#the-importance-of-payments">The Importance of Payments</a></h3>
+<p>Efficient payments are a backbone of human societies. They enable exchange of value for goods and services, facilitate social functioning (participating in activities e.g. going to the restaurant), and support economic growth; without them, commerce would grind to a halt, financial stability would be undermined, and access to essential services would be severely limited, potentially leading to economic stagnation and social disruption.</p>
+<h3 id="blockchains-as-a-payments-infrastructure"><a class="header" href="#blockchains-as-a-payments-infrastructure">Blockchains as a Payments Infrastructure</a></h3>
+<p>Since the very first blockchain, Bitcoin, payments have been the flagship use case. With further developments like Ethereum and alternative L1's (Polygon, Tron, Near) and innovations like rollups (Base, Starknet, Scroll), payments have been made faster, cheaper, and more powerful (with additional functionalities e.g. through smart contracts).</p>
+<div class="table-wrapper"><table><thead><tr><th>Blockchain</th><th>Bitcoin</th><th>Ethereum</th><th>Polygon</th><th>Base</th></tr></thead><tbody>
+<tr><td>Avg. tx fee ($)</td><td>0.68</td><td>1.85</td><td>0.003</td><td>0.00005</td></tr>
+<tr><td>Cost</td><td>High</td><td>High</td><td>Low</td><td>Virtually free</td></tr>
+<tr><td>UX</td><td>Bad</td><td>Bad</td><td>Bad</td><td>Average</td></tr>
+<tr><td>Network</td><td>Decentralized</td><td>Decentralized</td><td>Less decentralized</td><td>Centralized</td></tr>
+<tr><td>Privacy</td><td>None</td><td>None</td><td>None</td><td>None</td></tr>
+</tbody></table>
+</div>
+<p>Nonetheless, for years blockchain payments have remained expensive (especially at the base layers e.g. Bitcoin, Ethereum), complex to make due to bad UX, and lack essential functionalities like privacy. This has prevented blockchains from acquiring the role of leading payment infrastructure and forced users to continue relying on classical centralized infrastructures (e.g. Visa, Mastercard, PayPal, Venmo, Revolut, Banks, etc.).</p>
+<h3 id="the-importance-of-privacy-in-payments"><a class="header" href="#the-importance-of-privacy-in-payments">The Importance of Privacy in Payments</a></h3>
+<p>Privacy in payment systems is crucial for protecting individual freedoms, maintaining financial autonomy, and ensuring the healthy functioning of economies. Different payment infrastructures offer varying levels of privacy:</p>
+<ol>
+<li>
+<p>Traditional Banking Systems:</p>
+<ul>
+<li>Users have privacy from other users</li>
+<li>No privacy from the bank/operator</li>
+<li>No privacy from the government</li>
+</ul>
+</li>
+<li>
+<p>Current Decentralized Systems (e.g., public blockchains):</p>
+<ul>
+<li>No privacy from other users (transactions are visible)</li>
+<li>No privacy from network operators/validators</li>
+<li>Pseudonymity ≠ Privacy (transactions can often be linked to identities)</li>
+</ul>
+</li>
+<li>
+<p>Implications of Limited Privacy:</p>
+<ul>
+<li>Chilling effect on transactions: Users may avoid certain purchases or donations</li>
+<li>Financial surveillance: Governments or corporations can track spending habits</li>
+<li>Discrimination: Transaction history could be used for unfair treatment</li>
+<li>Security risks: Visible wealth or spending patterns may attract criminals</li>
+</ul>
+</li>
+</ol>
+<p>This lack of privacy hinders the freedom of users, who may restrain from transacting because of the trace they could leave in the system.</p>
+<ol start="4">
+<li>Ideal Privacy in Payments:
+<ul>
+<li>Transactional details visible only to involved parties</li>
+<li>Protection against both external observers and system operators</li>
+<li>Ability to selectively disclose information for regulatory compliance</li>
+</ul>
+</li>
+</ol>
+<p>Privacy-preserving payment systems empower users to transact freely without fear of surveillance or judgment, fostering a more open and innovative economy.</p>
+<h3 id="what-about-current-private-decentralized-systems"><a class="header" href="#what-about-current-private-decentralized-systems">What about current private decentralized systems?</a></h3>
+<h2 id="miden-an-improved-payments-infrastructure"><a class="header" href="#miden-an-improved-payments-infrastructure">Miden an improved payments infrastructure</a></h2>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="tutorials"><a class="header" href="#tutorials">Tutorials</a></h1>
 <h2 id="why-build-tutorials"><a class="header" href="#why-build-tutorials">Why build tutorials?</a></h2>
 <p>Tutorials enable the fast transfer of knowledge from one group of individuals to another. In our case, from the Miden core developers to potential users or contributors/developers. Tutorials, if done correctly, can be an effective way to speed up the onboarding of target audiences and foster ecosystem growth. On the other hand, tutorials, if poorly realized, can be a source of frustration and lead to loss of target audience.</p>

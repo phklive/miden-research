@@ -4,6 +4,8 @@
 
 - [Novel Applications](novel_applications/README.md)
 
+    - [Private payment](novel_applications/private_payment.md)
+
 - [Tutorials](tutorials/README.md)
 
   - [Installation](tutorials/installation.md)
