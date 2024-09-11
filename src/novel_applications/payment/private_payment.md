@@ -1,6 +1,6 @@
 # Private Payment
 
-<!-- TODO: Add image -->
+![Private payment](../../assets/images/private_payment.png)
 
 ## The why?
 
