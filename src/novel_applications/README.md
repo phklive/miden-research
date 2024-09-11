@@ -6,7 +6,7 @@ Leveraging Miden's novel architecture opens the door to a plethora of innovative
 
 ### Payment
 
-- [Private payment](./private_payment.md)
+- [Private payment](./payment/private_payment.md)
 - [1-to-n private payment](./payment/1-to-n_private_payment.md)
 
 ### Defi
