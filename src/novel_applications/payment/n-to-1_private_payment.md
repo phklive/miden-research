@@ -8,16 +8,22 @@
 
 ### N-to-1 payments for companies
 
-Companies historically have had a difficult time to manage payrolls. When a company experiences growth to hundreds or even thousands of employees, suppliers, partners, etc. It becomes increasingly complex and expensive to manage such a large number of payments to be made. N-to-1 payments can be a solution for companies of any size trying to simplify their payments system. Gone are the days of manual or even automatic transfers to each individual, using Miden companies could fullfill **ALL** of their required payments in **ONE SINGLE TRANSACTION**.
+Historically, companies have struggled with payroll management, especially as they scale. As organizations grow to encompass hundreds or thousands of employees, suppliers, and partners, managing numerous payments becomes increasingly complex and expensive. Traditional methods, whether manual or automated, often result in time-consuming processes, higher error rates, and significant administrative costs.
+
+N-to-1 payments offers a solution for companies of all sizes. Using Miden, businesses can now fulfill **ALL** of their required payments in **ONE SINGLE TRANSACTION**. This approach eliminates the need for individual transfers, dramatically reducing processing time, minimizing errors, and cutting transaction costs.
 
 ### Private payments for companies
 
-Private payments are essential in human societies, [learn more](./private_payment.md). And even more importantly for companies.
+Private payments are not just essential in human societies, [learn more](./private_payment.md); they are crucial for the functioning of modern businesses. While individuals value financial privacy, companies depend on it for their survival and growth in competitive markets.
+
+Companies rely on private payments for several reasons. Which includes maintaining competitive advantages by keeping financial strategies confidential, protecting intellectual property related to research and development investments, ensuring market stability by preventing unintended reactions to large transactions, payment of employees, suppliers and partners and many more. 
+
+By maintaining privacy in their financial transactions, companies can operate more effectively in competitive business environments. This privacy does not exist in current payment systems nor in the classical bankind infrastructure nor in current blockchains. Miden brings a solution to this problem through private transactions.
 
 ## The how?
 
 ## The vision
 
-Leveraging the Miden primitives mentioned above, we can imagine a powerful n-to-1 payment app that would enable companies of all sizes to manage all thei payments in an elegant, private, fast, cheap, streamlined way, built on top of Miden's infrastructure.
+Leveraging the Miden primitives mentioned above, we can imagine a powerful n-to-1 payment app that would enable companies of all sizes to manage their payments in an elegant, private, fast, cheap, streamlined way, built on top of Miden's infrastructure.
 
 ### Conclusion
