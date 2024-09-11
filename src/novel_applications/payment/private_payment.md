@@ -2,13 +2,15 @@
 
 <!-- TODO: Add image -->
 
-## Introduction
+## The why?
 
-### The Importance of Payments
+### Introduction
+
+#### The Importance of Payments
 
 Efficient payments are a backbone of human societies. They enable exchange of value for goods and services, facilitate social functioning (participating in activities e.g. going to the restaurant), and support economic growth; without them, commerce would grind to a halt, financial stability would be undermined, and access to essential services would be severely limited, potentially leading to economic stagnation and social disruption.
 
-### Blockchains as a Payments Infrastructure
+#### Blockchains as a Payments Infrastructure
 
 Since the very first blockchain, Bitcoin, payments have been the flagship use case. With further developments like Ethereum and alternative L1's (Polygon, Tron, Near) and innovations like rollups (Base, Starknet, Scroll), payments have been made faster, cheaper, and more powerful (with additional functionalities e.g. through smart contracts).
 
@@ -27,7 +29,7 @@ Nonetheless, for years blockchain payments have remained expensive (especially a
 
 <!-- TODO: Add example of Tron as no.1 example of need of stable payments on chain -->
 
-### The Importance of Privacy in Payments
+#### The Importance of Privacy in Payments
 
 Privacy in payment systems is crucial for protecting individual freedoms, maintaining financial autonomy, and ensuring the healthy functioning of economies. Different payment infrastructures offer varying levels of privacy:
 
@@ -56,7 +58,7 @@ This lack of privacy hinders the freedom of users, who may restrain from transac
 
 Privacy-preserving payment systems empower users to transact freely without fear of surveillance or judgment, fostering a more open and innovative economy.
 
-### What about current private decentralized systems?
+#### What about current private decentralized systems?
 
 We already have existing decentralized privacy preserving protocols as of time of writing, being [Zcash](https://z.cash) and [Monero](https://getmonero.org), hence why would we need other systems?:
 
@@ -86,7 +88,9 @@ Most payments for general purpose blockchains must be made through browser walle
 
 I believe that Miden can solve these issues, let me show you how.
 
-## Miden an improved payments infrastructure
+## The how?
+
+### Miden an improved payments infrastructure
 
 Given the limitations of existing blockchains and payments infrastructure, both public and privacy-focused, there is a clear need for a solution that combines privacy, efficiency and functionality. This is where Miden enters the picture, by building on the foundational work around privacy of projects like Zcash and Monero and around computation of a project like Ethereum, while also incorporating lessons learned from scalable solutions like rollups, Miden presents a promising approach towards building a more ideal payments infrastructure.
 
@@ -102,9 +106,9 @@ The Miden protocol gives us the best of all worlds by addressing each of the key
 | Speed | Slow | Fast |
 | User Experience | Poor UX | Abstracted UX (Applications) |
 
-### The Miden protocol
+#### The Miden protocol
 
-#### Peer-to-peer private transfers
+##### Peer-to-peer private transfers
 
 Miden enables users to perform peer-to-peer private transfers using local execution and local proving, here is an example of it step by step:
 
@@ -125,7 +129,7 @@ To do so the following scheme can be applied:
 
 <!-- TODO: Add image -->
 
-#### Account abstraction
+##### Account abstraction
 
 Ethereum has set the standard for accounts in the VM enabled blockchain world. There are two types of accounts in Ethereum:
 
@@ -145,36 +149,38 @@ Miden supports full account abstraction enabling full programmability of user ac
 
 The `Miden VM code` field hints that all Miden accounts are `abstracted` which enables arbitrary logic to be executed against them, opening the door to unbounded functionalities. Using this innovations we can imagine improvements in UX like social recovery, abstracted seed phrases, Face-ID signing, and many more.
 
-#### Privacy scales better
+##### Privacy scales better
 
 <!-- TODO: finish section -->
 
-#### Conclusion
+##### Conclusion
 
 In this section we covered privacy through [peer-to-peer private transfers](#peer-to-peer-private-transfers), improvements in UX through [account abstraction](#account-abstraction) and lastly fast and cheap transactions through [privacy enabling better scaling](#privacy-scales-better).
 
-## The vision for a powerful payments app on Miden
+## The vision
+
+### A powerful payment application on Miden
 
 Leveraging the Miden primitives mentioned above, we can imagine a powerful payments app that would combine privacy, fast and cheap payments, a stunning user interface, great user experience while being fully permissionless and decentralized.
 
-### The frontend
+#### The frontend
 
-#### User interface
+##### User interface
 
 Taking inspiration on successful current payments apps like Venmo or Revolut we prioritise simplicity and cleanliness for the interface.
 
-#### User experience
+##### User experience
 
 Once again taking inspiration from successful payments applications we want to simplify the onboarding flow enabling users with any technical abilities to use our service. To do so we will go away what has been done in classical blockchain systems and abstract seed phrases for the users through the secure element of their device.
 
-### The backend
+#### The backend
 
-#### Secure enclave and Keystore
+##### Secure enclave and Keystore
 
-#### The relayer
+##### The relayer
 
-#### What about fees?
+##### What about fees?
 
-### To note
+#### To note
 
-## Conclusion
+### Conclusion
