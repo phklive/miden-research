@@ -219,7 +219,8 @@
 <tr><td>Privacy</td><td>None</td><td>None</td><td>None</td><td>None</td></tr>
 </tbody></table>
 </div>
-<p>Nonetheless, for years blockchain payments have remained expensive and slow, especially at the base layers due to high gas fees and slow finality (~1 hour for Bitcoin and 12 minutes for Ethereum), complex to make due to bad UI/UX, and lack essential functionalities like privacy. This has prevented blockchains from acquiring the role of leading payment infrastructure and forced users to continue relying on classical centralized infrastructures (e.g., Visa, Mastercard, PayPal, Venmo, Revolut, Banks, etc.).</p>
+<p>Nonetheless, for years blockchain payments have remained expensive and slow, especially at the base layers due to high gas fees and slow finality (~1 hour for Bitcoin and 12 minutes for Ethereum), complex to make due to bad UI/UX, and lack essential functionalities like privacy.</p>
+<p>This has prevented blockchains from acquiring the role of leading payment infrastructure and forced users to continue relying on classical centralized infrastructures (e.g., Visa, Mastercard, PayPal, Venmo, Revolut, Banks, etc.).</p>
 <h3 id="the-importance-of-privacy-in-payments"><a class="header" href="#the-importance-of-privacy-in-payments">The Importance of Privacy in Payments</a></h3>
 <p>Privacy in payment systems is crucial for protecting individual freedoms, maintaining financial autonomy, and ensuring the healthy functioning of economies. Different payment infrastructures offer varying levels of privacy:</p>
 <ol>
@@ -236,6 +237,7 @@
 <ul>
 <li>No privacy from other users (transactions are visible)</li>
 <li>No privacy from network operators/validators</li>
+<li>No privacy from the government</li>
 <li>Pseudonymity ≠ Privacy (transactions can often be linked to identities)</li>
 </ul>
 </li>
@@ -263,27 +265,29 @@
 <h3 id="what-about-current-private-decentralized-systems"><a class="header" href="#what-about-current-private-decentralized-systems">What about current private decentralized systems?</a></h3>
 <p>We already have existing decentralized privacy-preserving protocols as of the time of writing, being <a href="https://z.cash">Zcash</a> and <a href="https://getmonero.org">Monero</a>, hence why would we need other systems?:</p>
 <ol>
-<li>Lack of stable assets</li>
-</ol>
+<li>
+<p>Lack of stable assets:</p>
 <p>Zcash and Monero respectively and exclusively use the <code>ZEC</code> and <code>XMR</code> tokens, meaning that widely used stablecoins like <code>USDC</code>, <code>USDT</code>, and others can't be ported and used on such blockchains. The lack of stable assets pegged to an existing currency hinders the ability of users to pay and get paid for "real world" goods and services, hence preventing those systems from becoming widely adopted payment solutions and replacing current payments infrastructure.</p>
-<ol start="2">
-<li>Expensive payments</li>
-</ol>
+</li>
+<li>
+<p>Expensive payments:</p>
 <p>The average transaction fee of these blockchains as of the time of writing is:</p>
 <ul>
 <li>On Zcash: $0.023</li>
 <li>On Monero: $0.061</li>
 </ul>
 <p>Although being only a few cents, these transaction fees are still too high by orders of magnitude to compete with classical payment systems or existing blockchain rollups, pushing the average user to transact on those systems.</p>
-<ol start="3">
-<li>Lack of programmability</li>
-</ol>
+</li>
+<li>
+<p>Lack of programmability:</p>
 <p>Zcash and Monero are blockchains focused on payments; they do not provide a virtual machine enabling computation like Ethereum. This lack of programmability prevents the innovations that we have seen throughout the years with the development of smart contracts and other protocols making payments more efficient and powerful.</p>
-<ol start="4">
-<li>Bad user experience</li>
-</ol>
+</li>
+<li>
+<p>Bad user experience</p>
 <p>Most payments for general purpose blockchains must be made through browser wallets or cold wallet interfaces, which do not provide a compelling user interface and experience compared to existing banking apps like Venmo, PayPal, or Revolut. It is nonetheless important to note that attempts have been made, e.g., <a href="https://z.cash/ecosystem/zashi-wallet/">Zashi</a>.</p>
 <p>I believe that Miden can solve these issues. Let me show you how.</p>
+</li>
+</ol>
 <h2 id="the-how"><a class="header" href="#the-how">The How?</a></h2>
 <h3 id="miden-an-improved-payments-infrastructure"><a class="header" href="#miden-an-improved-payments-infrastructure">Miden: An Improved Payments Infrastructure</a></h3>
 <p>Given the limitations of existing blockchains and payments infrastructure, both public and privacy-focused, there is a clear need for a solution that combines privacy, efficiency, and functionality. This is where Miden enters the picture. By building on the foundational work around privacy of projects like Zcash and Monero and around computation of a project like Ethereum, while also incorporating lessons learned from scalable solutions like rollups, Miden presents a promising approach towards building a more ideal payments infrastructure.</p>
@@ -364,6 +368,7 @@
 <p><em>Question: How can the application developer use Miden to make private transfers?</em></p>
 <p>Using the <a href="https://www.npmjs.com/package/@demox-labs/miden-sdk?activeTab=readme">Miden SDK</a> or the <a href="https://github.com/0xPolygonMiden/miden-client">Miden client</a>, an application developer can import Miden core components into their application, enabling them to create accounts, use the <a href="https://github.com/0xPolygonMiden/miden-vm">Miden VM</a> to make state transitions (transactions) and generate notes, <a href="https://github.com/facebook/winterfell">Miden prover</a> to make proofs and preserve privacy, and more.</p>
 <h5 id="account-storage"><a class="header" href="#account-storage">Account storage</a></h5>
+<p><em>Question: Where and how would I store my account?</em></p>
 <p>The user account, assets and private key would be stored securely on device. For additional redundancy, we could add social recovery solutions, storage of an encrypted account state in the cloud, and more.</p>
 <h5 id="secure-enclave-and-keystore"><a class="header" href="#secure-enclave-and-keystore">Secure enclave and Keystore</a></h5>
 <p><em>Question: I don't really know what a private key is and it seems too important for me to store it safely, how can I do it?</em></p>
@@ -394,7 +399,7 @@
 <h5 id="what-about-fees"><a class="header" href="#what-about-fees">What about fees?</a></h5>
 <p><em>Question: Wouldn't I need to pay a lot in fees for each transaction?</em></p>
 <p>Any digital system incurs costs, be it centralized or decentralized. The cost of the material, running the software, employees, offices, etc. The default behavior for web2 applications is to subsidize these costs for their users, making the use of the service free and finding other ways to make profit. Current blockchains (web3) impose gas fees on their users relative to their computational use of the system. This payment of fees on each action has made the user experience and the cost to use blockchain systems higher than their web2 counterparts, hindering the adoption of blockchain-based applications.</p>
-<p>Miden's account abstraction solves this by enabling application developers to subsidize gas costs for their users through a <a href="https://www.stackup.sh/blog/what-are-paymasters">paymaster</a> scheme. Furthermore, the cost incurred by fees on Miden would be small thanks to <a href="novel_applications/payment/private_payment.html#privacy-scales-better">private scaling</a>.</p>
+<p>Miden's account abstraction solves this by enabling application developers to subsidize gas costs for their users through a <a href="https://www.stackup.sh/blog/what-are-paymasters">paymaster</a> scheme. Furthermore, the cost incurred by fees on Miden would be small; thanks to <a href="novel_applications/payment/private_payment.html#privacy-scales-better">private scaling</a>.</p>
 <h4 id="additional-features"><a class="header" href="#additional-features">Additional features</a></h4>
 <p>We could imagine additional features which could be added to this type of application:</p>
 <ul>

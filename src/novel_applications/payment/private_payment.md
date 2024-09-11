@@ -21,7 +21,9 @@ Since the very first blockchain, Bitcoin, payments have been the flagship use ca
 | Network | Decentralized | Decentralized | Less decentralized | Centralized |
 | Privacy | None | None | None | None |
 
-Nonetheless, for years blockchain payments have remained expensive and slow, especially at the base layers due to high gas fees and slow finality (~1 hour for Bitcoin and 12 minutes for Ethereum), complex to make due to bad UI/UX, and lack essential functionalities like privacy. This has prevented blockchains from acquiring the role of leading payment infrastructure and forced users to continue relying on classical centralized infrastructures (e.g., Visa, Mastercard, PayPal, Venmo, Revolut, Banks, etc.).
+Nonetheless, for years blockchain payments have remained expensive and slow, especially at the base layers due to high gas fees and slow finality (~1 hour for Bitcoin and 12 minutes for Ethereum), complex to make due to bad UI/UX, and lack essential functionalities like privacy.
+
+This has prevented blockchains from acquiring the role of leading payment infrastructure and forced users to continue relying on classical centralized infrastructures (e.g., Visa, Mastercard, PayPal, Venmo, Revolut, Banks, etc.).
 
 ### The Importance of Privacy in Payments
 
@@ -32,9 +34,10 @@ Privacy in payment systems is crucial for protecting individual freedoms, mainta
    - No privacy from the bank/operator
    - No privacy from the government
 
-2. Current Decentralized Systems (e.g., public blockchains):
+1. Current Decentralized Systems (e.g., public blockchains):
    - No privacy from other users (transactions are visible)
    - No privacy from network operators/validators
+   - No privacy from the government
    - Pseudonymity ≠ Privacy (transactions can often be linked to identities)
 
 3. Implications of Limited Privacy:
@@ -56,28 +59,28 @@ Privacy-preserving payment systems empower users to transact freely without fear
 
 We already have existing decentralized privacy-preserving protocols as of the time of writing, being [Zcash](https://z.cash) and [Monero](https://getmonero.org), hence why would we need other systems?:
 
-1. Lack of stable assets
+1. Lack of stable assets:
 
-Zcash and Monero respectively and exclusively use the `ZEC` and `XMR` tokens, meaning that widely used stablecoins like `USDC`, `USDT`, and others can't be ported and used on such blockchains. The lack of stable assets pegged to an existing currency hinders the ability of users to pay and get paid for "real world" goods and services, hence preventing those systems from becoming widely adopted payment solutions and replacing current payments infrastructure.
+    Zcash and Monero respectively and exclusively use the `ZEC` and `XMR` tokens, meaning that widely used stablecoins like `USDC`, `USDT`, and others can't be ported and used on such blockchains. The lack of stable assets pegged to an existing currency hinders the ability of users to pay and get paid for "real world" goods and services, hence preventing those systems from becoming widely adopted payment solutions and replacing current payments infrastructure.
 
-2. Expensive payments
+2. Expensive payments:
 
-The average transaction fee of these blockchains as of the time of writing is:
+    The average transaction fee of these blockchains as of the time of writing is:
 
-- On Zcash: $0.023
-- On Monero: $0.061
+    - On Zcash: $0.023
+    - On Monero: $0.061
 
-Although being only a few cents, these transaction fees are still too high by orders of magnitude to compete with classical payment systems or existing blockchain rollups, pushing the average user to transact on those systems.
+    Although being only a few cents, these transaction fees are still too high by orders of magnitude to compete with classical payment systems or existing blockchain rollups, pushing the average user to transact on those systems.
 
-3. Lack of programmability
+3. Lack of programmability:
 
-Zcash and Monero are blockchains focused on payments; they do not provide a virtual machine enabling computation like Ethereum. This lack of programmability prevents the innovations that we have seen throughout the years with the development of smart contracts and other protocols making payments more efficient and powerful.
+    Zcash and Monero are blockchains focused on payments; they do not provide a virtual machine enabling computation like Ethereum. This lack of programmability prevents the innovations that we have seen throughout the years with the development of smart contracts and other protocols making payments more efficient and powerful.
 
 4. Bad user experience
 
-Most payments for general purpose blockchains must be made through browser wallets or cold wallet interfaces, which do not provide a compelling user interface and experience compared to existing banking apps like Venmo, PayPal, or Revolut. It is nonetheless important to note that attempts have been made, e.g., [Zashi](https://z.cash/ecosystem/zashi-wallet/).
+    Most payments for general purpose blockchains must be made through browser wallets or cold wallet interfaces, which do not provide a compelling user interface and experience compared to existing banking apps like Venmo, PayPal, or Revolut. It is nonetheless important to note that attempts have been made, e.g., [Zashi](https://z.cash/ecosystem/zashi-wallet/).
 
-I believe that Miden can solve these issues. Let me show you how.
+    I believe that Miden can solve these issues. Let me show you how.
 
 ## The How?
 
@@ -188,6 +191,8 @@ Using the [Miden SDK](https://www.npmjs.com/package/@demox-labs/miden-sdk?active
 
 ##### Account storage
 
+*Question: Where and how would I store my account?*
+
 The user account, assets and private key would be stored securely on device. For additional redundancy, we could add social recovery solutions, storage of an encrypted account state in the cloud, and more.
 
 ##### Secure enclave and Keystore
@@ -233,7 +238,7 @@ Most web3 apps forced their users to sign a transaction for each of their action
 
 Any digital system incurs costs, be it centralized or decentralized. The cost of the material, running the software, employees, offices, etc. The default behavior for web2 applications is to subsidize these costs for their users, making the use of the service free and finding other ways to make profit. Current blockchains (web3) impose gas fees on their users relative to their computational use of the system. This payment of fees on each action has made the user experience and the cost to use blockchain systems higher than their web2 counterparts, hindering the adoption of blockchain-based applications.
 
-Miden's account abstraction solves this by enabling application developers to subsidize gas costs for their users through a [paymaster](https://www.stackup.sh/blog/what-are-paymasters) scheme. Furthermore, the cost incurred by fees on Miden would be small thanks to [private scaling](#privacy-scales-better).
+Miden's account abstraction solves this by enabling application developers to subsidize gas costs for their users through a [paymaster](https://www.stackup.sh/blog/what-are-paymasters) scheme. Furthermore, the cost incurred by fees on Miden would be small; thanks to [private scaling](#privacy-scales-better).
 
 #### Additional features
 
