@@ -6,7 +6,7 @@
 - [Introduction](novel_applications/README.md)
 - [Payment]()
   - [Private payment](novel_applications/payment/private_payment.md)
-  - [n-to-1 private payment](novel_applications/payment/n-to-1_private_payment.md)
+  - [1-to-n private payment](novel_applications/payment/1-to-n_private_payment.md)
 - [Identity]()
   - [Miden name service](novel_applications/identity/miden_name_service.md)
 

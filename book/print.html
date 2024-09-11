@@ -89,7 +89,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Novel Applications</li><li class="chapter-item expanded "><a href="novel_applications/index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Payment</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="novel_applications/payment/private_payment.html"><strong aria-hidden="true">2.1.</strong> Private payment</a></li><li class="chapter-item expanded "><a href="novel_applications/payment/n-to-1_private_payment.html"><strong aria-hidden="true">2.2.</strong> n-to-1 private payment</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Identity</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="novel_applications/identity/miden_name_service.html"><strong aria-hidden="true">3.1.</strong> Miden name service</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Tutorials</li><li class="chapter-item expanded "><a href="tutorials/index.html"><strong aria-hidden="true">4.</strong> Philosophy</a></li><li class="chapter-item expanded "><a href="tutorials/installation.html"><strong aria-hidden="true">5.</strong> Installation</a></li><li class="chapter-item expanded "><a href="tutorials/user/index.html"><strong aria-hidden="true">6.</strong> User Tutorials</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tutorials/user/first_miden_transaction.html"><strong aria-hidden="true">6.1.</strong> Your First Miden Transaction</a></li></ol></li><li class="chapter-item expanded "><a href="tutorials/developer/index.html"><strong aria-hidden="true">7.</strong> Developer Tutorials</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tutorials/developer/deploy_faucet.html"><strong aria-hidden="true">7.1.</strong> Deploy a Faucet on Miden</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Novel Applications</li><li class="chapter-item expanded "><a href="novel_applications/index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Payment</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="novel_applications/payment/private_payment.html"><strong aria-hidden="true">2.1.</strong> Private payment</a></li><li class="chapter-item expanded "><a href="novel_applications/payment/1-to-n_private_payment.html"><strong aria-hidden="true">2.2.</strong> 1-to-n private payment</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Identity</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="novel_applications/identity/miden_name_service.html"><strong aria-hidden="true">3.1.</strong> Miden name service</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Tutorials</li><li class="chapter-item expanded "><a href="tutorials/index.html"><strong aria-hidden="true">4.</strong> Philosophy</a></li><li class="chapter-item expanded "><a href="tutorials/installation.html"><strong aria-hidden="true">5.</strong> Installation</a></li><li class="chapter-item expanded "><a href="tutorials/user/index.html"><strong aria-hidden="true">6.</strong> User Tutorials</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tutorials/user/first_miden_transaction.html"><strong aria-hidden="true">6.1.</strong> Your First Miden Transaction</a></li></ol></li><li class="chapter-item expanded "><a href="tutorials/developer/index.html"><strong aria-hidden="true">7.</strong> Developer Tutorials</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tutorials/developer/deploy_faucet.html"><strong aria-hidden="true">7.1.</strong> Deploy a Faucet on Miden</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -181,7 +181,7 @@
 <h3 id="payment"><a class="header" href="#payment">Payment</a></h3>
 <ul>
 <li><a href="novel_applications/./private_payment.html">Private payment</a></li>
-<li><a href="novel_applications/">n-1 payment</a></li>
+<li><a href="novel_applications/./payment/1-to-n_private_payment.html">1-to-n private payment</a></li>
 </ul>
 <h3 id="defi"><a class="header" href="#defi">Defi</a></h3>
 <ul>
@@ -356,20 +356,29 @@
 <h5 id="what-about-fees"><a class="header" href="#what-about-fees">What about fees?</a></h5>
 <h4 id="to-note"><a class="header" href="#to-note">To note</a></h4>
 <h3 id="conclusion-1"><a class="header" href="#conclusion-1">Conclusion</a></h3>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="n-to-1-private-payment"><a class="header" href="#n-to-1-private-payment">N-to-1 private payment</a></h1>
-<!-- TODO: Add image -->
+<div style="break-before: page; page-break-before: always;"></div><h1 id="1-to-n-private-payment"><a class="header" href="#1-to-n-private-payment">1-to-n private payment</a></h1>
+<p><img src="novel_applications/payment/../../assets/images/1-to-n_private_payment.png" alt="1-to-n private payment" /></p>
 <h2 id="the-why-1"><a class="header" href="#the-why-1">The why?</a></h2>
 <h3 id="introduction-2"><a class="header" href="#introduction-2">Introduction</a></h3>
-<h3 id="n-to-1-payments-for-companies"><a class="header" href="#n-to-1-payments-for-companies">N-to-1 payments for companies</a></h3>
+<p>1-to-n private payment can be a powerful primitive enabling:</p>
+<ul>
+<li>Consolidation of multiple payments in a single transaction</li>
+<li>Increased privacy for all involved parties</li>
+<li>Reduced processing time</li>
+<li>Reduced complexity of task and possiblity of errors</li>
+<li>Reduced administrative costs</li>
+</ul>
+<p>1-to-n payment would enable actors from users wanting to make multiple payments to large corporations to benefit from a better payment primitive.</p>
+<h3 id="1-to-n-payments-for-companies"><a class="header" href="#1-to-n-payments-for-companies">1-to-n payments for companies</a></h3>
 <p>Historically, companies have struggled with payroll management, especially as they scale. As organizations grow to encompass hundreds or thousands of employees, suppliers, and partners, managing numerous payments becomes increasingly complex and expensive. Traditional methods, whether manual or automated, often result in time-consuming processes, higher error rates, and significant administrative costs.</p>
-<p>N-to-1 payments offers a solution for companies of all sizes. Using Miden, businesses can now fulfill <strong>ALL</strong> of their required payments in <strong>ONE SINGLE TRANSACTION</strong>. This approach eliminates the need for individual transfers, dramatically reducing processing time, minimizing errors, and cutting transaction costs.</p>
+<p>1-to-n payments offers a solution for companies of all sizes. Using Miden, businesses can now fulfill <strong>ALL</strong> of their required payments in <strong>ONE SINGLE TRANSACTION</strong>. This approach eliminates the need for individual transfers, dramatically reducing processing time, minimizing errors, and cutting transaction costs.</p>
 <h3 id="private-payments-for-companies"><a class="header" href="#private-payments-for-companies">Private payments for companies</a></h3>
 <p>Private payments are not just essential in human societies, <a href="novel_applications/payment/./private_payment.html">learn more</a>; they are crucial for the functioning of modern businesses. While individuals value financial privacy, companies depend on it for their survival and growth in competitive markets.</p>
 <p>Companies rely on private payments for several reasons. Which includes maintaining competitive advantages by keeping financial strategies confidential, protecting intellectual property related to research and development investments, ensuring market stability by preventing unintended reactions to large transactions, payment of employees, suppliers and partners and many more.</p>
 <p>By maintaining privacy in their financial transactions, companies can operate more effectively in competitive business environments. This privacy does not exist in current payment systems nor in the classical bankind infrastructure nor in current blockchains. Miden brings a solution to this problem through private transactions.</p>
 <h2 id="the-how-1"><a class="header" href="#the-how-1">The how?</a></h2>
 <h2 id="the-vision-1"><a class="header" href="#the-vision-1">The vision</a></h2>
-<p>Leveraging the Miden primitives mentioned above, we can imagine a powerful n-to-1 payment app that would enable companies of all sizes to manage their payments in an elegant, private, fast, cheap, streamlined way, built on top of Miden's infrastructure.</p>
+<p>Leveraging the Miden primitives mentioned above, we can imagine a powerful 1-to-n payment app that would enable companies of all sizes to manage their payments in an elegant, private, fast, cheap, streamlined way, built on top of Miden's infrastructure.</p>
 <h3 id="conclusion-2"><a class="header" href="#conclusion-2">Conclusion</a></h3>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="miden-name-service"><a class="header" href="#miden-name-service">Miden name service</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="tutorials"><a class="header" href="#tutorials">Tutorials</a></h1>

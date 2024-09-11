@@ -1,16 +1,26 @@
-# N-to-1 private payment
+# 1-to-n private payment
 
-<!-- TODO: Add image -->
+![1-to-n private payment](../../assets/images/1-to-n_private_payment.png)
 
 ## The why?
 
 ### Introduction
 
-### N-to-1 payments for companies
+1-to-n private payment can be a powerful primitive enabling:
+
+- Consolidation of multiple payments in a single transaction
+- Increased privacy for all involved parties
+- Reduced processing time
+- Reduced complexity of task and possiblity of errors
+- Reduced administrative costs
+
+1-to-n payment would enable actors from users wanting to make multiple payments to large corporations to benefit from a better payment primitive.
+
+### 1-to-n payments for companies
 
 Historically, companies have struggled with payroll management, especially as they scale. As organizations grow to encompass hundreds or thousands of employees, suppliers, and partners, managing numerous payments becomes increasingly complex and expensive. Traditional methods, whether manual or automated, often result in time-consuming processes, higher error rates, and significant administrative costs.
 
-N-to-1 payments offers a solution for companies of all sizes. Using Miden, businesses can now fulfill **ALL** of their required payments in **ONE SINGLE TRANSACTION**. This approach eliminates the need for individual transfers, dramatically reducing processing time, minimizing errors, and cutting transaction costs.
+1-to-n payments offers a solution for companies of all sizes. Using Miden, businesses can now fulfill **ALL** of their required payments in **ONE SINGLE TRANSACTION**. This approach eliminates the need for individual transfers, dramatically reducing processing time, minimizing errors, and cutting transaction costs.
 
 ### Private payments for companies
 
@@ -24,6 +34,6 @@ By maintaining privacy in their financial transactions, companies can operate mo
 
 ## The vision
 
-Leveraging the Miden primitives mentioned above, we can imagine a powerful n-to-1 payment app that would enable companies of all sizes to manage their payments in an elegant, private, fast, cheap, streamlined way, built on top of Miden's infrastructure.
+Leveraging the Miden primitives mentioned above, we can imagine a powerful 1-to-n payment app that would enable companies of all sizes to manage their payments in an elegant, private, fast, cheap, streamlined way, built on top of Miden's infrastructure.
 
 ### Conclusion
