@@ -161,7 +161,7 @@ In this section we covered privacy through [peer-to-peer private transfers](#pee
 
 ### A powerful payment application on Miden
 
-Leveraging the Miden primitives mentioned above, we can imagine a powerful payments app that would combine privacy, fast and cheap payments, a stunning user interface, great user experience while being fully permissionless and decentralized.
+Leveraging the Miden primitives mentioned above we can imagine a powerful payment application that would combine privacy, fast and cheap payments, a stunning user interface, great user experience while being built on top of a fully permissionless and decentralized infrastructure, Miden.
 
 #### The frontend
 
