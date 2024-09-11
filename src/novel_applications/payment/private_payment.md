@@ -1,5 +1,7 @@
 # Private Payment
 
+<!-- TODO: Add image -->
+
 ## Introduction
 
 ### The Importance of Payments
@@ -19,7 +21,11 @@ Since the very first blockchain, Bitcoin, payments have been the flagship use ca
 | Network | Decentralized | Decentralized | Less decentralized | Centralized |
 | Privacy | None | None | None | None |
 
+<!-- TODO: Add measurements of speed -->
+
 Nonetheless, for years blockchain payments have remained expensive (especially at the base layers e.g. Bitcoin, Ethereum), complex to make due to bad UX, and lack essential functionalities like privacy. This has prevented blockchains from acquiring the role of leading payment infrastructure and forced users to continue relying on classical centralized infrastructures (e.g. Visa, Mastercard, PayPal, Venmo, Revolut, Banks, etc.).
+
+<!-- TODO: Add example of Tron as no.1 example of need of stable payments on chain -->
 
 ### The Importance of Privacy in Payments
 
@@ -75,6 +81,9 @@ Zcash and Monero are blockchains focused on payments, they do not provide a virt
 
 Most payments for general purpose blockchains must be made through browser wallets or cold wallet interfaces, which do not provide a compelling user interface and experience compared to existing banking apps like Venmo, Paypal or Revolut. It is nonetheless important to note that attempts have been made e.g. [Zashi](https://z.cash/ecosystem/zashi-wallet/).
 
+<!-- TODO: Add lack of interoperability -->
+<!-- TODO: Add the fact that most privacy preserving coins can't be listed / exited on / from exchanges -->
+
 I believe that Miden can solve these issues, let me show you how.
 
 ## Miden an improved payments infrastructure
@@ -95,14 +104,77 @@ The Miden protocol gives us the best of all worlds by addressing each of the key
 
 ### The Miden protocol
 
-#### Peer-to-peer private payments
+#### Peer-to-peer private transfers
+
+Miden enables users to perform peer-to-peer private transfers using local execution and local proving, here is an example of it step by step:
+
+We agree on the following initial state: 
+
+- There are 2 users Alice and Bob
+- Alice owns 1 Ether, Bob owns no assets
+- Alice wants to send her 1 Ether to Bob
+- Alice and Bob want to remain private
+
+To do so the following scheme can be applied: 
+
+1. Alice transitions her state from a state `S` where she has `1 Ether` to a state `S'` where she has `0 Ether` transferring the asset into a `Note` using the [P2ID script](https://github.com/0xPolygonMiden/miden-base/blob/main/miden-lib/asm/note_scripts/P2ID.masm).
+ 
+2. Alice transfers this `Note` containing the asset to Bob using arbitrary solutions (On-chain encrypted notes (on the roadmap), Telegram, Signal, etc.)
+
+3. Bob receives the `Note` and transitions his state from `S` where he has `0 Ether` to a state `S'` where he has `1 Ether` consuming the `1 Ether` placed into the `Note` by Alice into his state.
+
+<!-- TODO: Add image -->
 
 #### Account abstraction
 
+Ethereum has set the standard for accounts in the VM enabled blockchain world. There are two types of accounts in Ethereum:
+
+- Externally owned accounts (EOA): are created by generating a public/private ECDSA key pair. Does not hold code. can initiate transactions.
+- Contract accounts (Smart contracts): are created by being deployed on the Ethereum blockchain by an EOA. Holds code which can be executed. can't initiate transactions.
+
+We clearly understand here that Ethereum has made the choice to separate user accounts from executable code. What if we could merge both to enable programmable user accounts? Welcoming `Account abstraction`, which can be defined as follows:
+
+"Account abstraction is a method of setting up a blockchain network in which users’ assets are stored exclusively in smart contracts, and not in external accounts (External Owned Accounts, EOAs). When using this approach, a crypto wallet turns into a unique smart contract that can be programmed for various purposes."
+
+[What is account abstraction and why is it important - Medium - Aleksander](https://medium.com/@alex-100/what-is-account-abstraction-and-why-is-it-important-9627a4ced4f3)
+
+Miden supports full account abstraction enabling full programmability of user accounts defined as follows: 
+
+<!-- TODO: Reduce the size of the image -->
+![Account definition](../../assets/images/account.png)
+
+The `Miden VM code` field hints that all Miden accounts are `abstracted` which enables arbitrary logic to be executed against them, opening the door to unbounded functionalities. Using this innovations we can imagine improvements in UX like social recovery, abstracted seed phrases, Face-ID signing, and many more.
+
 #### Privacy scales better
+
+<!-- TODO: finish section -->
+
+#### Conclusion
+
+In this section we covered privacy through [peer-to-peer private transfers](#peer-to-peer-private-transfers), improvements in UX through [account abstraction](#account-abstraction) and lastly fast and cheap transactions through [privacy enabling better scaling](#privacy-scales-better).
 
 ## The vision for a powerful payments app on Miden
 
-Leveraging the Miden primitives mentioned above, we can imagine a powerful payments app that would combine privacy, fast and cheap payments, a stunning user interface, easy to use for a great user experience while being fully permissionless and decentralized.
+Leveraging the Miden primitives mentioned above, we can imagine a powerful payments app that would combine privacy, fast and cheap payments, a stunning user interface, great user experience while being fully permissionless and decentralized.
+
+### The frontend
+
+#### User interface
+
+Taking inspiration on successful current payments apps like Venmo or Revolut we prioritise simplicity and cleanliness for the interface.
+
+#### User experience
+
+Once again taking inspiration from successful payments applications we want to simplify the onboarding flow enabling users with any technical abilities to use our service. To do so we will go away what has been done in classical blockchain systems and abstract seed phrases for the users through the secure element of their device.
+
+### The backend
+
+#### Secure enclave and Keystore
+
+#### The relayer
+
+#### What about fees?
+
+### To note
 
 ## Conclusion
