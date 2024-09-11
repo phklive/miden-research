@@ -6,8 +6,6 @@
 
 ### Introduction
 
-### The Importance of Payments
-
 Efficient payments are a backbone of human societies. They enable exchange of value for goods and services, facilitate social functioning (participating in activities e.g. going to the restaurant), and support economic growth; without them, commerce would grind to a halt, financial stability would be undermined, and access to essential services would be severely limited, potentially leading to economic stagnation and social disruption.
 
 ### Blockchains as a Payments Infrastructure
@@ -153,8 +151,6 @@ The `Miden VM code` field hints that all Miden accounts are `abstracted` which e
 
 <!-- TODO: finish section -->
 
-#### Conclusion
-
 In this section we covered privacy through [peer-to-peer private transfers](#peer-to-peer-private-transfers), improvements in UX through [account abstraction](#account-abstraction) and lastly fast and cheap transactions through [privacy enabling better scaling](#privacy-scales-better).
 
 ## The vision
@@ -165,22 +161,73 @@ Leveraging the Miden primitives mentioned above we can imagine a powerful paymen
 
 #### The frontend
 
-##### User interface
+Taking inspiration on successful current payments apps like Venmo or Revolut we would prioritise simplicity and cleanliness for the interface making the application approachable for any user.
 
-Taking inspiration on successful current payments apps like Venmo or Revolut we prioritise simplicity and cleanliness for the interface.
+![Venmo app](../../assets/images/venmo.png)
+![Revolut app](../../assets/images/revolut.png)
 
-##### User experience
+The goal being: 
 
-Once again taking inspiration from successful payments applications we want to simplify the onboarding flow enabling users with any technical abilities to use our service. To do so we will go away what has been done in classical blockchain systems and abstract seed phrases for the users through the secure element of their device.
+- Simplify the 
+ onboarding flow enabling users with any technical abilities to use our service. To do so we will go away what has been done in classical blockchain systems and abstract seed phrases for the users through the secure element of their device.
 
 #### The backend
 
+##### Making private transfers
+
+*Question: How can the application developer use Miden to make private transfers?*
+
+Using the [Miden SDK]() an application developer can import Miden core components into his application enabling him to [create accounts](), use the [Miden VM]() to make state transitions (transactions) and generate notes, [Miden prover]() to make proofs and preserve privacy, and more.
+
 ##### Secure enclave and Keystore
+
+*Question: I don't really know what I private key is and it seems too important for me to store it safely, how can I do?*
+
+To make the user onboarding seemless we would want to abstract away seed phrases and complex blockchain security measures. We could achieve this using the secure element of modern phones which stores key-pairs in trusted execution environements (TEE's) enabling signatures. They are currently used for face or finger recognition, login, Webauthn, payment and more: 
+
+- [Secure enclave](https://support.apple.com/en-gb/guide/security/sec59b0b31ff/web) for Apple phones
+- [Keystore](https://developer.android.com/privacy-and-security/keystore) for Android phones
+
+To leverage these secure elements in Miden we would need to implement signature verification for their supported signature schemes. A signature scheme supported by both of these secure elements is [ECDSA](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm), [ECDSA signature verification](https://github.com/0xPolygonMiden/miden-vm/blob/4923e3d69622e6b8a5d91fab2949cb83845cf134/stdlib/tests/crypto/ecdsa_secp256k1.rs) support on Miden would enable users to sign miden transaction using their phones face / finger recognition, password, etc. making the onboarding flow simpler.
 
 ##### The relayer
 
+*Question: Considering that the transactions are made locally by the users how would notes be handled and delivered to the recipients?*
+
+Relaying could be handled in different ways:
+
+- Off-chain relaying: the application or external actors could provide relaying services for the notes of the users (loosing privacy against the relayer)
+- On-chain relaying: the users could use on-chain encrypted notes to interact with other users (on the roadmap)
+
+The first method could be assimilated with a `PUSH` scheme where the source would send his notes to the relayer and the relayer would send those notes to the intended target. The second method could be assimilated as a `PULL` scheme where the source would encrypt notes and send them to the Miden rollup. The application would then need to filter existing notes from the rollup notes tree and consume relevant notes for the target user (which could be done on action or time basis).
+
+##### Miden name service
+
+*Question: How would I easily find and interact with my contacts if addresses are a bunch of random characters startin with `0x`?*
+
+To simplify the addition and management of contacts and make the experience more recognizable by web2 users we could improve the address book of the application by leveraging [Miden name service](../identity/miden_name_service.md). A name service is essential for users to easily find, send and remember contacts (We do store phone numbers as numbers in our phones, we store them as names, attached is the phone number e.g. Mom -> +123456789).
+
+##### Users need to sign a transaction for each action
+
+*Question: Wouldn't I have a bad experience needing to sign each and every action I make inside the application?*
+
+Most web3 apps forced their users to sign a transaction for each of their actions because each state update of a blockchain requires a valid account signature, we can solve this using these two solutions:
+
+- Batching of user actions: User actions can be batched and do not need to be sent on each action.
+- Hybrid web2 / web3 apps: Not everything needs to live on-chain, the application developer can handle some of the actions on a classible web2 backend, while the userkeep sovereignty over their assets and data in a web3 way
+
 ##### What about fees?
 
-#### To note
+*Question: Wouldn't I need to pay a lot in fees for each transaction?*
+
+Any digital system incurs costs be it centralized or decentralized. The cost of the material, running the software, employees, offices, etc. The default behaviour for web2 applications is to subsidise these costs for their users making the use of the service free and finding other ways to make profit. Current blockchains (web3) impose gas fees to their users relative to their computational use of the system. This payment of fees on each action has made the user experience and the cost to use blockchain systems higher than their web2 counterparts, hindering the adoption of blockchain based applications.
+
+Miden's account abstraction solves this by enabling application developers to subsidise gas costs for their users through a [paymaster](https://www.stackup.sh/blog/what-are-paymasters) scheme. Furthermore the cost incurred by fees on Miden would be small thanks to [private scaling](#privacy-scales-better).
+
+#### Additional features
+
+We could imagine additional features which could be added to this type of application:
+
+- Simple investments page, aggregating best sources of yield from different Miden protocols
 
 ### Conclusion
