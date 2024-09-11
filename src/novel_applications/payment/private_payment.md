@@ -21,11 +21,7 @@ Since the very first blockchain, Bitcoin, payments have been the flagship use ca
 | Network | Decentralized | Decentralized | Less decentralized | Centralized |
 | Privacy | None | None | None | None |
 
-<!-- TODO: Add measurements of speed -->
-
-Nonetheless, for years blockchain payments have remained expensive (especially at the base layers e.g. Bitcoin, Ethereum), complex to make due to bad UX, and lack essential functionalities like privacy. This has prevented blockchains from acquiring the role of leading payment infrastructure and forced users to continue relying on classical centralized infrastructures (e.g. Visa, Mastercard, PayPal, Venmo, Revolut, Banks, etc.).
-
-<!-- TODO: Add example of Tron as no.1 example of need of stable payments on chain -->
+Nonetheless, for years blockchain payments have remained expensive and slow especially at the base layers due to high gas fees and slow finality (~1 hour for Bitcoin and 12 minutes for Ethereum), complex to make due to bad UI/UX, and lack essential functionalities like privacy. This has prevented blockchains from acquiring the role of leading payment infrastructure and forced users to continue relying on classical centralized infrastructures (e.g. Visa, Mastercard, PayPal, Venmo, Revolut, Banks, etc.).
 
 ### The Importance of Privacy in Payments
 
@@ -81,9 +77,6 @@ Zcash and Monero are blockchains focused on payments, they do not provide a virt
 
 Most payments for general purpose blockchains must be made through browser wallets or cold wallet interfaces, which do not provide a compelling user interface and experience compared to existing banking apps like Venmo, Paypal or Revolut. It is nonetheless important to note that attempts have been made e.g. [Zashi](https://z.cash/ecosystem/zashi-wallet/).
 
-<!-- TODO: Add lack of interoperability -->
-<!-- TODO: Add the fact that most privacy preserving coins can't be listed / exited on / from exchanges -->
-
 I believe that Miden can solve these issues, let me show you how.
 
 ## The how?
@@ -125,8 +118,6 @@ To do so the following scheme can be applied:
 
 3. Bob receives the `Note` and transitions his state from `S` where he has `0 Ether` to a state `S'` where he has `1 Ether` consuming the `1 Ether` placed into the `Note` by Alice into his state.
 
-<!-- TODO: Add image -->
-
 #### Account abstraction
 
 Ethereum has set the standard for accounts in the VM enabled blockchain world. There are two types of accounts in Ethereum:
@@ -150,7 +141,11 @@ The `Miden VM code` field hints that all Miden accounts are `abstracted` which e
 
 #### Privacy scales better
 
+![Privacy scales better](../../assets/images/privacy_scales_better.png)
+
 At Miden we believe that [privacy scales better](https://polygon.technology/blog/privacy-a-fundamental-right-and-a-practical-necessity)! Using local execution and local proving the computation is pushed at the edges of the system. Users would execute and prove their own state transitions directly on-device which means that the node operators do not need to handle and charge for complex computation hence making the blockchain faster and cheaper for users. This scheme firstly enables privacy considering that no private data leaves the users device and secondly makes the use of the blockchain cheaper for the user.
+
+#### Conclusion 
 
 In this section we covered privacy through [peer-to-peer private transfers](#peer-to-peer-private-transfers), improvements in UX through [account abstraction](#account-abstraction) and lastly fast and cheap transactions through [privacy enabling better scaling](#privacy-scales-better).
 

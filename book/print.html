@@ -218,9 +218,8 @@
 <tr><td>Network</td><td>Decentralized</td><td>Decentralized</td><td>Less decentralized</td><td>Centralized</td></tr>
 <tr><td>Privacy</td><td>None</td><td>None</td><td>None</td><td>None</td></tr>
 </tbody></table>
-</div><!-- TODO: Add measurements of speed -->
-<p>Nonetheless, for years blockchain payments have remained expensive (especially at the base layers e.g. Bitcoin, Ethereum), complex to make due to bad UX, and lack essential functionalities like privacy. This has prevented blockchains from acquiring the role of leading payment infrastructure and forced users to continue relying on classical centralized infrastructures (e.g. Visa, Mastercard, PayPal, Venmo, Revolut, Banks, etc.).</p>
-<!-- TODO: Add example of Tron as no.1 example of need of stable payments on chain -->
+</div>
+<p>Nonetheless, for years blockchain payments have remained expensive and slow especially at the base layers due to high gas fees and slow finality (~1 hour for Bitcoin and 12 minutes for Ethereum), complex to make due to bad UI/UX, and lack essential functionalities like privacy. This has prevented blockchains from acquiring the role of leading payment infrastructure and forced users to continue relying on classical centralized infrastructures (e.g. Visa, Mastercard, PayPal, Venmo, Revolut, Banks, etc.).</p>
 <h3 id="the-importance-of-privacy-in-payments"><a class="header" href="#the-importance-of-privacy-in-payments">The Importance of Privacy in Payments</a></h3>
 <p>Privacy in payment systems is crucial for protecting individual freedoms, maintaining financial autonomy, and ensuring the healthy functioning of economies. Different payment infrastructures offer varying levels of privacy:</p>
 <ol>
@@ -284,8 +283,6 @@
 <li>Bad user experience</li>
 </ol>
 <p>Most payments for general purpose blockchains must be made through browser wallets or cold wallet interfaces, which do not provide a compelling user interface and experience compared to existing banking apps like Venmo, Paypal or Revolut. It is nonetheless important to note that attempts have been made e.g. <a href="https://z.cash/ecosystem/zashi-wallet/">Zashi</a>.</p>
-<!-- TODO: Add lack of interoperability -->
-<!-- TODO: Add the fact that most privacy preserving coins can't be listed / exited on / from exchanges -->
 <p>I believe that Miden can solve these issues, let me show you how.</p>
 <h2 id="the-how"><a class="header" href="#the-how">The how?</a></h2>
 <h3 id="miden-an-improved-payments-infrastructure"><a class="header" href="#miden-an-improved-payments-infrastructure">Miden an improved payments infrastructure</a></h3>
@@ -323,7 +320,6 @@
 <p>Bob receives the <code>Note</code> and transitions his state from <code>S</code> where he has <code>0 Ether</code> to a state <code>S'</code> where he has <code>1 Ether</code> consuming the <code>1 Ether</code> placed into the <code>Note</code> by Alice into his state.</p>
 </li>
 </ol>
-<!-- TODO: Add image -->
 <h4 id="account-abstraction"><a class="header" href="#account-abstraction">Account abstraction</a></h4>
 <p>Ethereum has set the standard for accounts in the VM enabled blockchain world. There are two types of accounts in Ethereum:</p>
 <ul>
@@ -339,7 +335,9 @@
 </p>
 <p>The <code>Miden VM code</code> field hints that all Miden accounts are <code>abstracted</code> which enables arbitrary logic to be executed against them, opening the door to unbounded functionalities. Using this innovations we can imagine improvements in UX like social recovery, abstracted seed phrases, Face-ID signing, and many more.</p>
 <h4 id="privacy-scales-better"><a class="header" href="#privacy-scales-better">Privacy scales better</a></h4>
+<p><img src="novel_applications/payment/../../assets/images/privacy_scales_better.png" alt="Privacy scales better" /></p>
 <p>At Miden we believe that <a href="https://polygon.technology/blog/privacy-a-fundamental-right-and-a-practical-necessity">privacy scales better</a>! Using local execution and local proving the computation is pushed at the edges of the system. Users would execute and prove their own state transitions directly on-device which means that the node operators do not need to handle and charge for complex computation hence making the blockchain faster and cheaper for users. This scheme firstly enables privacy considering that no private data leaves the users device and secondly makes the use of the blockchain cheaper for the user.</p>
+<h4 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h4>
 <p>In this section we covered privacy through <a href="novel_applications/payment/private_payment.html#peer-to-peer-private-transfers">peer-to-peer private transfers</a>, improvements in UX through <a href="novel_applications/payment/private_payment.html#account-abstraction">account abstraction</a> and lastly fast and cheap transactions through <a href="novel_applications/payment/private_payment.html#privacy-scales-better">privacy enabling better scaling</a>.</p>
 <h2 id="the-vision"><a class="header" href="#the-vision">The vision</a></h2>
 <h3 id="a-powerful-payment-application-on-miden"><a class="header" href="#a-powerful-payment-application-on-miden">A powerful payment application on Miden</a></h3>
@@ -404,7 +402,7 @@
 <li>Creation of digital bank cards and integration with Apple / Google pay</li>
 <li>Creation of physical bank cards (Gnosis card, Crypto.com card, etc.)</li>
 </ul>
-<h3 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h3>
+<h3 id="conclusion-1"><a class="header" href="#conclusion-1">Conclusion</a></h3>
 <p>Miden represents a significant leap forward in blockchain-based payment systems, addressing key limitations of existing solutions. By combining privacy, programmability, and scalability, it opens the door to user-friendly applications that could revolutionize how we transact, as presented above.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="1-to-n-private-payment"><a class="header" href="#1-to-n-private-payment">1-to-n private payment</a></h1>
 <p><img src="novel_applications/payment/../../assets/images/1-to-n_private_payment.png" alt="1-to-n private payment" /></p>
@@ -429,7 +427,7 @@
 <h2 id="the-how-1"><a class="header" href="#the-how-1">The how?</a></h2>
 <h2 id="the-vision-1"><a class="header" href="#the-vision-1">The vision</a></h2>
 <p>Leveraging the Miden primitives mentioned above, we can imagine a powerful 1-to-n payment app that would enable companies of all sizes to manage their payments in an elegant, private, fast, cheap, streamlined way, built on top of Miden's infrastructure.</p>
-<h3 id="conclusion-1"><a class="header" href="#conclusion-1">Conclusion</a></h3>
+<h3 id="conclusion-2"><a class="header" href="#conclusion-2">Conclusion</a></h3>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="miden-name-service-1"><a class="header" href="#miden-name-service-1">Miden name service</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="tutorials"><a class="header" href="#tutorials">Tutorials</a></h1>
 <p>Our tutorials help users and developers get accustomed with the usage of the Miden protocol. Following is our philosophy around tutorial building.</p>
