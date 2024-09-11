@@ -142,14 +142,15 @@ We clearly understand here that Ethereum has made the choice to separate user ac
 
 Miden supports full account abstraction enabling full programmability of user accounts defined as follows: 
 
-<!-- TODO: Reduce the size of the image -->
-![Account definition](../../assets/images/account.png)
+<p align="center">
+    <img src="../../assets/images/account.png" width="40%" alt="Account definition">
+</p>
 
 The `Miden VM code` field hints that all Miden accounts are `abstracted` which enables arbitrary logic to be executed against them, opening the door to unbounded functionalities. Using this innovations we can imagine improvements in UX like social recovery, abstracted seed phrases, Face-ID signing, and many more.
 
 #### Privacy scales better
 
-<!-- TODO: finish section -->
+At Miden we believe that [privacy scales better](https://polygon.technology/blog/privacy-a-fundamental-right-and-a-practical-necessity)! Using local execution and local proving the computation is pushed at the edges of the system. Users would execute and prove their own state transitions directly on-device which means that the node operators do not need to handle and charge for complex computation hence making the blockchain faster and cheaper for users. This scheme firstly enables privacy considering that no private data leaves the users device and secondly makes the use of the blockchain cheaper for the user.
 
 In this section we covered privacy through [peer-to-peer private transfers](#peer-to-peer-private-transfers), improvements in UX through [account abstraction](#account-abstraction) and lastly fast and cheap transactions through [privacy enabling better scaling](#privacy-scales-better).
 
@@ -159,17 +160,28 @@ In this section we covered privacy through [peer-to-peer private transfers](#pee
 
 Leveraging the Miden primitives mentioned above we can imagine a powerful payment application that would combine privacy, fast and cheap payments, a stunning user interface, great user experience while being built on top of a fully permissionless and decentralized infrastructure, Miden.
 
+The following features would be required:
+
+- A modern, simple and clean frontend
+- Ability to make transfers in a fast, cheap and privacy preserving way
+- Ability to create accounts with a simple onboarding flow (abstracted seed phrases)
+- Built on top of Miden 
+
 #### The frontend
 
-Taking inspiration on successful current payments apps like Venmo or Revolut we would prioritise simplicity and cleanliness for the interface making the application approachable for any user.
+Taking inspiration on successful current payments apps we would prioritise simplicity and cleanliness for the interface making the application approachable for users with any technical level.
 
+**Venmo:**
 ![Venmo app](../../assets/images/venmo.png)
+
+**Revolut:**
 ![Revolut app](../../assets/images/revolut.png)
 
-The goal being: 
+We can imagine a frontend that would aggregate all user assets and transfers, display a portfolio value and enable transfers:
 
-- Simplify the 
- onboarding flow enabling users with any technical abilities to use our service. To do so we will go away what has been done in classical blockchain systems and abstract seed phrases for the users through the secure element of their device.
+<p align="center">
+    <img src="../../assets/images/payment_application.png" width="60%" alt="Imagined payment app">
+</p>
 
 #### The backend
 
@@ -177,7 +189,11 @@ The goal being:
 
 *Question: How can the application developer use Miden to make private transfers?*
 
-Using the [Miden SDK]() an application developer can import Miden core components into his application enabling him to [create accounts](), use the [Miden VM]() to make state transitions (transactions) and generate notes, [Miden prover]() to make proofs and preserve privacy, and more.
+Using the [Miden SDK](https://www.npmjs.com/package/@demox-labs/miden-sdk?activeTab=readme) or the [Miden client](https://github.com/0xPolygonMiden/miden-client) an application developer can import Miden core components into his application enabling him to create accounts, use the [Miden VM](https://github.com/0xPolygonMiden/miden-vm) to make state transitions (transactions) and generate notes, [Miden prover](https://github.com/facebook/winterfell) to make proofs and preserve privacy, and more.
+
+##### Account storage
+
+The user account, assets and private key would be stored securely on device. For additional redundancy we could add social recovery solutions, storage of an encrypted account state in the cloud, and more.
 
 ##### Secure enclave and Keystore
 
@@ -228,6 +244,10 @@ Miden's account abstraction solves this by enabling application developers to su
 
 We could imagine additional features which could be added to this type of application:
 
-- Simple investments page, aggregating best sources of yield from different Miden protocols
+- Simple defi page, aggregating best sources of yield / lending / borrowing from different Miden protocols
+- Creation of digital bank cards and integration with Apple / Google pay
+- Creation of physical bank cards (Gnosis card, Crypto.com card, etc.)
 
 ### Conclusion
+
+Miden represents a significant leap forward in blockchain-based payment systems, addressing key limitations of existing solutions. By combining privacy, programmability, and scalability, it opens the door to user-friendly applications that could revolutionize how we transact, as presented above.
