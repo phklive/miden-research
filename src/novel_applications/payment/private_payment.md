@@ -16,7 +16,7 @@ Since the very first blockchain, Bitcoin, payments have been the flagship use ca
 |------------|---------|----------|---------|------|
 | Avg. tx fee ($) | 0.68 | 1.85 | 0.003 | 0.00005 |
 | Cost | High | High | Low | Virtually free |
-| Speed | Low | Low | High | High | 
+| Speed | Low | Low | High | High |
 | UX | Poor | Poor | Poor | Average |
 | Network | Decentralized | Decentralized | Less decentralized | Centralized |
 | Privacy | None | None | None | None |
@@ -34,7 +34,7 @@ Privacy in payment systems is crucial for protecting individual freedoms, mainta
    - No privacy from the bank/operator
    - No privacy from the government
 
-1. Current Decentralized Systems (e.g., public blockchains):
+2. Current Decentralized Systems (e.g., public blockchains):
    - No privacy from other users (transactions are visible)
    - No privacy from network operators/validators
    - No privacy from the government
@@ -48,10 +48,11 @@ Privacy in payment systems is crucial for protecting individual freedoms, mainta
 
 This lack of privacy hinders the freedom of users, who may refrain from transacting because of the trace they could leave in the system.
 
-4. Ideal Privacy in Payments:
-   - Transactional details visible only to involved parties
-   - Protection against both external observers and system operators
-   - Ability to selectively disclose information for regulatory compliance
+Ideal Privacy in Payments:
+
+- Transactional details visible only to involved parties
+- Protection against both external observers and system operators
+- Ability to selectively disclose information for regulatory compliance
 
 Privacy-preserving payment systems empower users to transact freely without fear of surveillance or judgment, fostering a more open and innovative economy.
 
@@ -88,7 +89,7 @@ We already have existing decentralized privacy-preserving protocols as of the ti
 
 Given the limitations of existing blockchains and payments infrastructure, both public and privacy-focused, there is a clear need for a solution that combines privacy, efficiency, and functionality. This is where Miden enters the picture. By building on the foundational work around privacy of projects like Zcash and Monero and around computation of a project like Ethereum, while also incorporating lessons learned from scalable solutions like rollups, Miden presents a promising approach towards building a more ideal payments infrastructure.
 
-The Miden protocol gives us the best of all worlds by addressing each of the key issues identified in current systems: 
+The Miden protocol gives us the best of all worlds by addressing each of the key issues identified in current systems:
 
 | Aspect | Current Systems | Miden |
 |--------|-----------------|-------|
@@ -106,17 +107,17 @@ The Miden protocol gives us the best of all worlds by addressing each of the key
 
 Miden enables users to perform peer-to-peer private transfers using local execution and local proving. Here is an example of it step by step:
 
-We agree on the following initial state: 
+We agree on the following initial state:
 
 - There are 2 users, Alice and Bob
 - Alice owns 1 Ether, Bob owns no assets
 - Alice wants to send her 1 Ether to Bob
 - Alice and Bob want to remain private
 
-To do so, the following scheme can be applied: 
+To do so, the following scheme can be applied:
 
 1. Alice transitions her state from a state `S` where she has `1 Ether` to a state `S'` where she has `0 Ether`, transferring the asset into a `Note` using the [P2ID script](https://github.com/0xPolygonMiden/miden-base/blob/main/miden-lib/asm/note_scripts/P2ID.masm).
- 
+
 2. Alice transfers this `Note` containing the asset to Bob using arbitrary solutions (On-chain encrypted notes (on the roadmap), Telegram, Signal, etc.).
 
 3. Bob receives the `Note` and transitions his state from `S` where he has `0 Ether` to a state `S'` where he has `1 Ether`, consuming the `1 Ether` placed into the `Note` by Alice into his state.
@@ -134,7 +135,7 @@ We clearly understand here that Ethereum has made the choice to separate user ac
 
 [What is account abstraction and why is it important - Medium - Aleksander](https://medium.com/@alex-100/what-is-account-abstraction-and-why-is-it-important-9627a4ced4f3)
 
-Miden supports full account abstraction, enabling full programmability of user accounts defined as follows: 
+Miden supports full account abstraction, enabling full programmability of user accounts defined as follows:
 
 <p align="center">
     <img src="../../assets/images/account.png" width="40%" alt="Account definition">
@@ -148,7 +149,7 @@ The `Miden VM code` field hints that all Miden accounts are `abstracted`, which 
 
 At Miden, we believe that [privacy scales better](https://polygon.technology/blog/privacy-a-fundamental-right-and-a-practical-necessity)! Using local execution and local proving, the computation is pushed to the edges of the system. Users would execute and prove their own state transitions directly on-device, which means that the node operators do not need to handle and charge for complex computation, hence making the blockchain faster and cheaper for users. This scheme firstly ensures privacy because no private data leaves the user's device and secondly makes the use of the blockchain cheaper for the user.
 
-#### Conclusion 
+#### Finally
 
 In this section, we covered privacy through [peer-to-peer private transfers](#peer-to-peer-private-transfers), improvements in UX through [account abstraction](#account-abstraction), and lastly, fast and cheap transactions through [privacy enabling better scaling](#privacy-scales-better).
 
@@ -163,7 +164,7 @@ The following features would be required:
 - A modern, simple and clean frontend
 - Ability to make transfers in a fast, cheap and privacy preserving way
 - Ability to create accounts with a simple onboarding flow (abstracted seed phrases)
-- Built on top of Miden 
+- Built on top of Miden
 
 #### The frontend
 
@@ -199,7 +200,7 @@ The user account, assets and private key would be stored securely on device. For
 
 *Question: I don't really know what a private key is and it seems too important for me to store it safely, how can I do it?*
 
-To make the user onboarding seamless, we would want to abstract away seed phrases and complex blockchain security measures. We could achieve this using the secure element of modern phones which stores key-pairs in trusted execution environments (TEEs) enabling signatures. They are currently used for face or finger recognition, login, WebAuthn, payment and more: 
+To make the user onboarding seamless, we would want to abstract away seed phrases and complex blockchain security measures. We could achieve this using the secure element of modern phones which stores key-pairs in trusted execution environments (TEEs) enabling signatures. They are currently used for face or finger recognition, login, WebAuthn, payment and more:
 
 - [Secure enclave](https://support.apple.com/en-gb/guide/security/sec59b0b31ff/web) for Apple phones
 - [Keystore](https://developer.android.com/privacy-and-security/keystore) for Android phones
