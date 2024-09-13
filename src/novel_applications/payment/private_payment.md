@@ -10,7 +10,7 @@ Efficient payments are a backbone of human societies. They enable exchange of va
 
 ### Blockchains as a Payments Infrastructure
 
-Since the very first blockchain, Bitcoin, payments have been the flagship use case. With further developments like Ethereum and alternative L1's (Polygon, Tron, Near) and innovations like rollups (Base, Starknet, Scroll), payments have been made faster, cheaper, and more powerful (with additional functionalities e.g., through smart contracts).
+Since the very first blockchain, Bitcoin, payments have been the flagship use case. With further developments like Ethereum and alternative L1's (Polygon, Tron, Near) and innovations like rollups (Base, Starknet, Scroll), payments have been made faster and cheaper.
 
 | Blockchain | Bitcoin | Ethereum | Polygon | Base |
 |------------|---------|----------|---------|------|
@@ -73,11 +73,7 @@ We already have existing decentralized privacy-preserving protocols as of the ti
 
     Although being only a few cents, these transaction fees are still too high by orders of magnitude to compete with classical payment systems or existing blockchain rollups, pushing the average user to transact on those systems.
 
-3. Lack of programmability:
-
-    Zcash and Monero are blockchains focused on payments; they do not provide a virtual machine enabling computation like Ethereum. This lack of programmability prevents the innovations that we have seen throughout the years with the development of smart contracts and other protocols making payments more efficient and powerful.
-
-4. Bad user experience
+3. Bad user experience
 
     Most payments for general purpose blockchains must be made through browser wallets or cold wallet interfaces, which do not provide a compelling user interface and experience compared to existing banking apps like Venmo, PayPal, or Revolut. It is nonetheless important to note that attempts have been made, e.g., [Zashi](https://z.cash/ecosystem/zashi-wallet/).
 
