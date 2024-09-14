@@ -54,7 +54,7 @@ To do so, the following scheme can be applied:
 
 1. Alice transitions her state from a state `S` where she has `1 Ether` to a state `S'` where she has `0 Ether`, transferring the asset into a `Note` using the [P2ID script](https://github.com/0xPolygonMiden/miden-base/blob/main/miden-lib/asm/note_scripts/P2ID.masm).
 
-2. Alice transfers this `Note` containing the asset to Bob using arbitrary solutions (On-chain encrypted notes (on the roadmap), Telegram, Signal, etc.).
+2. Alice transfers this `Note` containing the asset to Bob using a private arbitrary solution (On-chain encrypted notes (on the roadmap), Telegram, Signal, etc.).
 
 3. Bob receives the `Note` and transitions his state from `S` where he has `0 Ether` to a state `S'` where he has `1 Ether`, consuming the `1 Ether` placed into the `Note` by Alice into his state.
 
