@@ -174,107 +174,38 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="private-payment"><a class="header" href="#private-payment">Private Payment</a></h1>
-<p><img src="../../assets/images/private_payment.png" alt="Private payment" /></p>
-<h2 id="the-why"><a class="header" href="#the-why">The Why?</a></h2>
-<h3 id="introduction"><a class="header" href="#introduction">Introduction</a></h3>
-<p>Efficient payments are a backbone of human societies. They enable exchange of value for goods and services, facilitate social functioning (participating in activities e.g., going to the restaurant), and support economic growth. Without them, commerce would grind to a halt, financial stability would be undermined, and access to essential services would be severely limited, potentially leading to economic stagnation and social disruption.</p>
-<h3 id="blockchains-as-a-payments-infrastructure"><a class="header" href="#blockchains-as-a-payments-infrastructure">Blockchains as a Payments Infrastructure</a></h3>
-<p>Since the very first blockchain, Bitcoin, payments have been the flagship use case. With further developments like Ethereum and alternative L1's (Polygon, Tron, Near) and innovations like rollups (Base, Starknet, Scroll), payments have been made faster, cheaper, and more powerful (with additional functionalities e.g., through smart contracts).</p>
-<div class="table-wrapper"><table><thead><tr><th>Blockchain</th><th>Bitcoin</th><th>Ethereum</th><th>Polygon</th><th>Base</th></tr></thead><tbody>
-<tr><td>Avg. tx fee ($)</td><td>0.68</td><td>1.85</td><td>0.003</td><td>0.00005</td></tr>
-<tr><td>Cost</td><td>High</td><td>High</td><td>Low</td><td>Virtually free</td></tr>
-<tr><td>Speed</td><td>Low</td><td>Low</td><td>High</td><td>High</td></tr>
-<tr><td>UX</td><td>Poor</td><td>Poor</td><td>Poor</td><td>Average</td></tr>
-<tr><td>Network</td><td>Decentralized</td><td>Decentralized</td><td>Less decentralized</td><td>Centralized</td></tr>
-<tr><td>Privacy</td><td>None</td><td>None</td><td>None</td><td>None</td></tr>
-</tbody></table>
-</div>
-<p>Nonetheless, for years blockchain payments have remained expensive and slow, especially at the base layers due to high gas fees and slow finality (~1 hour for Bitcoin and 12 minutes for Ethereum), complex to make due to bad UI/UX, and lack essential functionalities like privacy.</p>
-<p>This has prevented blockchains from acquiring the role of leading payment infrastructure and forced users to continue relying on classical centralized infrastructures (e.g., Visa, Mastercard, PayPal, Venmo, Revolut, Banks, etc.).</p>
-<h3 id="the-importance-of-privacy-in-payments"><a class="header" href="#the-importance-of-privacy-in-payments">The Importance of Privacy in Payments</a></h3>
-<p>Privacy in payment systems is crucial for protecting individual freedoms, maintaining financial autonomy, and ensuring the healthy functioning of economies. Different payment infrastructures offer varying levels of privacy:</p>
+<p><img src="../../assets/images/private_payment.png" alt="Private payment header image" /></p>
+<h2 id="blockchains-as-payment-infrastructure"><a class="header" href="#blockchains-as-payment-infrastructure">Blockchains as Payment Infrastructure</a></h2>
+<p>Efficient payments are the economic backbone of human societies. They enable the exchange of value for goods and services, facilitate social functioning (e.g., participating in activities like dining out), and support financial interactions.</p>
+<p>Since the inception of Bitcoin, the first blockchain, payments have been the flagship use case. With further developments like Ethereum, alternative L1s (Polygon, Tron, Celo, BNB), and innovations like rollups (Base, Starknet, Scroll), payments have become faster and cheaper.</p>
+<p>The lowered transaction fees offered by these alternative chains make them more suitable for routine, person-to-person payments and small-scale commercial transactions. This "real-world" adoption is evident from <a href="https://app.artemisanalytics.com/stablecoins?chain=all&amp;stablecoinMetric=STABLECOIN_MC">data on stablecoin usage across these chains</a>. The term "real world" in this context refers primarily to user-to-user transfers, as opposed to institutional transactions. This interpretation is supported by the notably lower average transaction sizes compared to Ethereum (~$15 vs ~$100k).</p>
+<p>While blockchains have largely solved the problems of high gas fees and slow execution/finality through the introduction of alternative layer-1 and layer-2 solutions, two critical issues continue to prevent mass adoption:</p>
 <ol>
 <li>
-<p>Traditional Banking Systems:</p>
-<ul>
-<li>Users have privacy from other users</li>
-<li>No privacy from the bank/operator</li>
-<li>No privacy from the government</li>
-</ul>
+<p><strong>User Experience (UI/UX)</strong>: Despite technological advancements, many blockchain applications still suffer from poor UI/UX design. The complexity of interacting with blockchain systems remains a significant barrier for non-technical users, often involving confusing wallet interfaces, complicated address systems, sensitive seed phrases and unintuitive transaction processes.</p>
 </li>
 <li>
-<p>Current Decentralized Systems (e.g., public blockchains):</p>
-<ul>
-<li>No privacy from other users (transactions are visible)</li>
-<li>No privacy from network operators/validators</li>
-<li>No privacy from the government</li>
-<li>Pseudonymity ≠ Privacy (transactions can often be linked to identities)</li>
-</ul>
-</li>
-<li>
-<p>Implications of Limited Privacy:</p>
-<ul>
-<li>Chilling effect on transactions: Users may avoid certain purchases or donations</li>
-<li>Financial surveillance: Governments or corporations can track spending habits</li>
-<li>Discrimination: Transaction history could be used for unfair treatment</li>
-<li>Security risks: Visible wealth or spending patterns may attract criminals</li>
-</ul>
+<p><strong>Privacy</strong>: Most blockchain networks still operate on a public ledger system, where all transactions are visible and traceable. The lack of built-in privacy features means that financial transactions lack the confidentiality that users expect from financial systems. This transparency, while beneficial for some use cases, poses significant concerns for personal and business transactions that require discretion.</p>
 </li>
 </ol>
-<p>This lack of privacy hinders the freedom of users, who may refrain from transacting because of the trace they could leave in the system.</p>
-<ol start="4">
-<li>Ideal Privacy in Payments:
-<ul>
-<li>Transactional details visible only to involved parties</li>
-<li>Protection against both external observers and system operators</li>
-<li>Ability to selectively disclose information for regulatory compliance</li>
-</ul>
-</li>
-</ol>
-<p>Privacy-preserving payment systems empower users to transact freely without fear of surveillance or judgment, fostering a more open and innovative economy.</p>
-<h3 id="what-about-current-private-decentralized-systems"><a class="header" href="#what-about-current-private-decentralized-systems">What about current private decentralized systems?</a></h3>
-<p>We already have existing decentralized privacy-preserving protocols as of the time of writing, being <a href="https://z.cash">Zcash</a> and <a href="https://getmonero.org">Monero</a>, hence why would we need other systems?:</p>
-<ol>
-<li>
-<p>Lack of stable assets:</p>
-<p>Zcash and Monero respectively and exclusively use the <code>ZEC</code> and <code>XMR</code> tokens, meaning that widely used stablecoins like <code>USDC</code>, <code>USDT</code>, and others can't be ported and used on such blockchains. The lack of stable assets pegged to an existing currency hinders the ability of users to pay and get paid for "real world" goods and services, hence preventing those systems from becoming widely adopted payment solutions and replacing current payments infrastructure.</p>
-</li>
-<li>
-<p>Expensive payments:</p>
-<p>The average transaction fee of these blockchains as of the time of writing is:</p>
-<ul>
-<li>On Zcash: $0.023</li>
-<li>On Monero: $0.061</li>
-</ul>
-<p>Although being only a few cents, these transaction fees are still too high by orders of magnitude to compete with classical payment systems or existing blockchain rollups, pushing the average user to transact on those systems.</p>
-</li>
-<li>
-<p>Lack of programmability:</p>
-<p>Zcash and Monero are blockchains focused on payments; they do not provide a virtual machine enabling computation like Ethereum. This lack of programmability prevents the innovations that we have seen throughout the years with the development of smart contracts and other protocols making payments more efficient and powerful.</p>
-</li>
-<li>
-<p>Bad user experience</p>
-<p>Most payments for general purpose blockchains must be made through browser wallets or cold wallet interfaces, which do not provide a compelling user interface and experience compared to existing banking apps like Venmo, PayPal, or Revolut. It is nonetheless important to note that attempts have been made, e.g., <a href="https://z.cash/ecosystem/zashi-wallet/">Zashi</a>.</p>
-<p>I believe that Miden can solve these issues. Let me show you how.</p>
-</li>
-</ol>
-<h2 id="the-how"><a class="header" href="#the-how">The How?</a></h2>
-<h3 id="miden-an-improved-payments-infrastructure"><a class="header" href="#miden-an-improved-payments-infrastructure">Miden: An Improved Payments Infrastructure</a></h3>
-<p>Given the limitations of existing blockchains and payments infrastructure, both public and privacy-focused, there is a clear need for a solution that combines privacy, efficiency, and functionality. This is where Miden enters the picture. By building on the foundational work around privacy of projects like Zcash and Monero and around computation of a project like Ethereum, while also incorporating lessons learned from scalable solutions like rollups, Miden presents a promising approach towards building a more ideal payments infrastructure.</p>
-<p>The Miden protocol gives us the best of all worlds by addressing each of the key issues identified in current systems:</p>
+<p>These issues have prevented blockchains from acquiring the role of leading payment infrastructure and forced users to continue relying on classical centralized infrastructures (e.g., Visa, Mastercard, PayPal, Venmo, Revolut, banks, etc.).</p>
+<p>This raises the question: <em>What about current private decentralized systems?</em></p>
+<p>While decentralized privacy-preserving protocols like <a href="https://z.cash">Zcash</a> and <a href="https://getmonero.org">Monero</a> exist, they face significant limitations. These systems lack stable assets, exclusively using their native tokens (ZEC and XMR), which prevents the use of widely adopted stablecoins like USDC or USDT. This absence of stable, pegged currencies hinders real-world transactions and broad adoption. Additionally, their transaction fees (Zcash: $0.023, Monero: $0.061), while seemingly low, are still too high to compete effectively with traditional payment systems or newer blockchain solutions.</p>
+<p>Miden solves these issues.</p>
+<h2 id="miden-an-improved-payment-infrastructure"><a class="header" href="#miden-an-improved-payment-infrastructure">Miden: an improved payment infrastructure</a></h2>
+<p>Given the limitations of existing blockchains and payments infrastructure, both public and privacy-focused, there is a clear need for a solution that combines privacy, efficiency, and functionality. This is where Miden enters the picture. By building on the foundational work around privacy of projects like Zcash and Monero and around computation of a project like Ethereum, while also incorporating lessons learned from scalable solutions like rollups, Miden presents a promising approach towards building a more ideal payments infrastructure:</p>
 <div class="table-wrapper"><table><thead><tr><th>Aspect</th><th>Current Systems</th><th>Miden</th></tr></thead><tbody>
 <tr><td>Network Structure</td><td>Centralized</td><td>Decentralized (On the roadmap)</td></tr>
 <tr><td>Asset Support</td><td>Lack of stable assets</td><td>Arbitrary assets</td></tr>
-<tr><td>Programmability</td><td>Lack of programmability</td><td>Turing Complete VM</td></tr>
 <tr><td>Privacy</td><td>Public</td><td>Private</td></tr>
 <tr><td>Cost</td><td>Expensive</td><td>Cheap</td></tr>
 <tr><td>Speed</td><td>Slow</td><td>Fast</td></tr>
 <tr><td>User Experience</td><td>Poor UX</td><td>Abstracted UX (Applications)</td></tr>
 </tbody></table>
 </div>
-<h3 id="the-miden-protocol"><a class="header" href="#the-miden-protocol">The Miden Protocol</a></h3>
-<h4 id="peer-to-peer-private-transfers"><a class="header" href="#peer-to-peer-private-transfers">Peer-to-peer private transfers</a></h4>
-<p>Miden enables users to perform peer-to-peer private transfers using local execution and local proving. Here is an example of it step by step:</p>
+<p>The Miden protocol gives us the best of all worlds by addressing each of the key issues identified in current systems.</p>
+<h2 id="payments-using-the-miden-protocol"><a class="header" href="#payments-using-the-miden-protocol">Payments using the Miden protocol</a></h2>
+<p>Miden enables users to perform <a href="https://polygon.technology/blog/polygon-miden-transaction-model-2">peer-to-peer private transfers</a> using local execution and local proving. Here is an example of it step by step:</p>
 <p>We agree on the following initial state:</p>
 <ul>
 <li>There are 2 users, Alice and Bob</li>
@@ -294,7 +225,30 @@
 <p>Bob receives the <code>Note</code> and transitions his state from <code>S</code> where he has <code>0 Ether</code> to a state <code>S'</code> where he has <code>1 Ether</code>, consuming the <code>1 Ether</code> placed into the <code>Note</code> by Alice into his state.</p>
 </li>
 </ol>
-<h4 id="account-abstraction"><a class="header" href="#account-abstraction">Account abstraction</a></h4>
+<h2 id="a-powerful-payment-application-on-miden"><a class="header" href="#a-powerful-payment-application-on-miden">A powerful payment application on Miden</a></h2>
+<p>Leveraging the Miden primitives mentioned above, we can imagine a powerful payment application that would combine privacy, fast and cheap payments, a stunning user interface, great user experience while being built on top of a fully permissionless and decentralized infrastructure, Miden. The following features would be required:</p>
+<ul>
+<li>A modern, simple and clean UI</li>
+<li>Ability to make transfers in a fast, cheap and privacy preserving way</li>
+<li>Ability to create accounts with a simple onboarding flow (abstracted seed phrases/UX)</li>
+<li>Built on top of Miden</li>
+</ul>
+<p>Taking inspiration from successful payment applications (e.i. Venmo or Revolut), we would prioritize simplicity and cleanliness for the interface, making the application approachable for users of any technical level. We can imagine a frontend that would aggregate all user assets and transfers, display a portfolio value and enable transfers:</p>
+<p align="center">
+    <img src="../../assets/images/payment_application.png" width="40%" alt="Imagined payment app">
+</p>
+<p>We could imagine additional features which could be added to this type of application:</p>
+<ul>
+<li>Simple DeFi page, aggregating best sources of yield / lending / borrowing from different Miden protocols</li>
+<li>Phone-to-phone tap payment</li>
+<li>Creation of digital bank cards and integration with Apple / Google Pay</li>
+<li>Creation of physical bank cards (Gnosis card, Crypto.com card, etc.)</li>
+</ul>
+<h2 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h2>
+<p>Miden represents a significant leap forward in blockchain-based payment systems, addressing key limitations of existing solutions. By combining privacy, programmability, and scalability, it opens the door to user-friendly applications that could revolutionize how we transact, as presented above.</p>
+<h2 id="additional-thoughts-and-questions"><a class="header" href="#additional-thoughts-and-questions">Additional thoughts and questions</a></h2>
+<h4 id="a-better-ux-on-miden-account-abstraction"><a class="header" href="#a-better-ux-on-miden-account-abstraction">A better UX on Miden: Account abstraction</a></h4>
+<p><em>Question: Why would a user have a better UX on Miden than on another blockchain?</em></p>
 <p>Ethereum has set the standard for accounts in the VM-enabled blockchain world. There are two types of accounts in Ethereum:</p>
 <ul>
 <li>Externally owned accounts (EOA): are created by generating a public/private ECDSA key pair. Does not hold code. Can initiate transactions.</li>
@@ -308,39 +262,13 @@
     <img src="../../assets/images/account.png" width="40%" alt="Account definition">
 </p>
 <p>The <code>Miden VM code</code> field hints that all Miden accounts are <code>abstracted</code>, which enables arbitrary logic to be executed against them, opening the door to unbounded functionalities. Using these innovations, we can imagine improvements in UX like social recovery, abstracted seed phrases, Face-ID signing, and many more.</p>
-<h4 id="privacy-scales-better"><a class="header" href="#privacy-scales-better">Privacy scales better</a></h4>
-<p><img src="../../assets/images/privacy_scales_better.png" alt="Privacy scales better" /></p>
-<p>At Miden, we believe that <a href="https://polygon.technology/blog/privacy-a-fundamental-right-and-a-practical-necessity">privacy scales better</a>! Using local execution and local proving, the computation is pushed to the edges of the system. Users would execute and prove their own state transitions directly on-device, which means that the node operators do not need to handle and charge for complex computation, hence making the blockchain faster and cheaper for users. This scheme firstly ensures privacy because no private data leaves the user's device and secondly makes the use of the blockchain cheaper for the user.</p>
-<h4 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h4>
-<p>In this section, we covered privacy through <a href="#peer-to-peer-private-transfers">peer-to-peer private transfers</a>, improvements in UX through <a href="#account-abstraction">account abstraction</a>, and lastly, fast and cheap transactions through <a href="#privacy-scales-better">privacy enabling better scaling</a>.</p>
-<h2 id="the-vision"><a class="header" href="#the-vision">The vision</a></h2>
-<h3 id="a-powerful-payment-application-on-miden"><a class="header" href="#a-powerful-payment-application-on-miden">A powerful payment application on Miden</a></h3>
-<p>Leveraging the Miden primitives mentioned above, we can imagine a powerful payment application that would combine privacy, fast and cheap payments, a stunning user interface, great user experience while being built on top of a fully permissionless and decentralized infrastructure, Miden.</p>
-<p>The following features would be required:</p>
-<ul>
-<li>A modern, simple and clean frontend</li>
-<li>Ability to make transfers in a fast, cheap and privacy preserving way</li>
-<li>Ability to create accounts with a simple onboarding flow (abstracted seed phrases)</li>
-<li>Built on top of Miden</li>
-</ul>
-<h4 id="the-frontend"><a class="header" href="#the-frontend">The frontend</a></h4>
-<p>Taking inspiration from successful current payments apps, we would prioritize simplicity and cleanliness for the interface, making the application approachable for users with any technical level.</p>
-<p><strong>Venmo:</strong>
-<img src="../../assets/images/venmo.png" alt="Venmo app" /></p>
-<p><strong>Revolut:</strong>
-<img src="../../assets/images/revolut.png" alt="Revolut app" /></p>
-<p>We can imagine a frontend that would aggregate all user assets and transfers, display a portfolio value and enable transfers:</p>
-<p align="center">
-    <img src="../../assets/images/payment_application.png" width="60%" alt="Imagined payment app">
-</p>
-<h4 id="the-backend"><a class="header" href="#the-backend">The backend</a></h4>
-<h5 id="making-private-transfers"><a class="header" href="#making-private-transfers">Making private transfers</a></h5>
+<h4 id="making-private-transfers"><a class="header" href="#making-private-transfers">Making private transfers</a></h4>
 <p><em>Question: How can the application developer use Miden to make private transfers?</em></p>
 <p>Using the <a href="https://www.npmjs.com/package/@demox-labs/miden-sdk?activeTab=readme">Miden SDK</a> or the <a href="https://github.com/0xPolygonMiden/miden-client">Miden client</a>, an application developer can import Miden core components into their application, enabling them to create accounts, use the <a href="https://github.com/0xPolygonMiden/miden-vm">Miden VM</a> to make state transitions (transactions) and generate notes, <a href="https://github.com/facebook/winterfell">Miden prover</a> to make proofs and preserve privacy, and more.</p>
-<h5 id="account-storage"><a class="header" href="#account-storage">Account storage</a></h5>
+<h4 id="account-storage"><a class="header" href="#account-storage">Account storage</a></h4>
 <p><em>Question: Where and how would I store my account?</em></p>
 <p>The user account, assets and private key would be stored securely on device. For additional redundancy, we could add social recovery solutions, storage of an encrypted account state in the cloud, and more.</p>
-<h5 id="secure-enclave-and-keystore"><a class="header" href="#secure-enclave-and-keystore">Secure enclave and Keystore</a></h5>
+<h4 id="secure-enclave-and-keystore"><a class="header" href="#secure-enclave-and-keystore">Secure enclave and Keystore</a></h4>
 <p><em>Question: I don't really know what a private key is and it seems too important for me to store it safely, how can I do it?</em></p>
 <p>To make the user onboarding seamless, we would want to abstract away seed phrases and complex blockchain security measures. We could achieve this using the secure element of modern phones which stores key-pairs in trusted execution environments (TEEs) enabling signatures. They are currently used for face or finger recognition, login, WebAuthn, payment and more:</p>
 <ul>
@@ -348,7 +276,7 @@
 <li><a href="https://developer.android.com/privacy-and-security/keystore">Keystore</a> for Android phones</li>
 </ul>
 <p>To leverage these secure elements in Miden, we would need to implement signature verification for their supported signature schemes. A signature scheme supported by both of these secure elements is <a href="https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm">ECDSA</a>. <a href="https://github.com/0xPolygonMiden/miden-vm/blob/4923e3d69622e6b8a5d91fab2949cb83845cf134/stdlib/tests/crypto/ecdsa_secp256k1.rs">ECDSA signature verification</a> support on Miden would enable users to sign Miden transactions using their phones' face / finger recognition, password, etc., making the onboarding flow simpler.</p>
-<h5 id="the-relayer"><a class="header" href="#the-relayer">The relayer</a></h5>
+<h4 id="the-relayer"><a class="header" href="#the-relayer">The relayer</a></h4>
 <p><em>Question: Considering that the transactions are made locally by the users, how would notes be handled and delivered to the recipients?</em></p>
 <p>Relaying could be handled in different ways:</p>
 <ul>
@@ -356,29 +284,20 @@
 <li>On-chain relaying: the users could use on-chain encrypted notes to interact with other users (on the roadmap)</li>
 </ul>
 <p>The first method could be assimilated with a <code>PUSH</code> scheme where the source would send their notes to the relayer and the relayer would send those notes to the intended target. The second method could be assimilated as a <code>PULL</code> scheme where the source would encrypt notes and send them to the Miden rollup. The application would then need to filter existing notes from the rollup notes tree and consume relevant notes for the target user (which could be done on action or time basis).</p>
-<h5 id="miden-name-service"><a class="header" href="#miden-name-service">Miden name service</a></h5>
+<h4 id="miden-name-service"><a class="header" href="#miden-name-service">Miden name service</a></h4>
 <p><em>Question: How would I easily find and interact with my contacts if addresses are a bunch of random characters starting with <code>0x</code>?</em></p>
 <p>To simplify the addition and management of contacts and make the experience more recognizable by web2 users, we could improve the address book of the application by leveraging <a href="../identity/miden_name_service.html">Miden name service</a>. A name service is essential for users to easily find, send and remember contacts (We do not store phone numbers as numbers in our phones, we store them as names, attached is the phone number e.g. Mom -&gt; +123456789).</p>
-<h5 id="users-need-to-sign-a-transaction-for-each-action"><a class="header" href="#users-need-to-sign-a-transaction-for-each-action">Users need to sign a transaction for each action</a></h5>
+<h4 id="users-need-to-sign-a-transaction-for-each-action"><a class="header" href="#users-need-to-sign-a-transaction-for-each-action">Users need to sign a transaction for each action</a></h4>
 <p><em>Question: Wouldn't I have a bad experience needing to sign each and every action I make inside the application?</em></p>
 <p>Most web3 apps forced their users to sign a transaction for each of their actions because each state update of a blockchain requires a valid account signature. We can solve this using these two solutions:</p>
 <ul>
 <li>Batching of user actions: User actions can be batched and do not need to be sent on each action.</li>
 <li>Hybrid web2 / web3 apps: Not everything needs to live on-chain, the application developer can handle some of the actions on a classic web2 backend, while the users keep sovereignty over their assets and data in a web3 way.</li>
 </ul>
-<h5 id="what-about-fees"><a class="header" href="#what-about-fees">What about fees?</a></h5>
+<h4 id="what-about-fees"><a class="header" href="#what-about-fees">What about fees?</a></h4>
 <p><em>Question: Wouldn't I need to pay a lot in fees for each transaction?</em></p>
 <p>Any digital system incurs costs, be it centralized or decentralized. The cost of the material, running the software, employees, offices, etc. The default behavior for web2 applications is to subsidize these costs for their users, making the use of the service free and finding other ways to make profit. Current blockchains (web3) impose gas fees on their users relative to their computational use of the system. This payment of fees on each action has made the user experience and the cost to use blockchain systems higher than their web2 counterparts, hindering the adoption of blockchain-based applications.</p>
 <p>Miden's account abstraction solves this by enabling application developers to subsidize gas costs for their users through a <a href="https://www.stackup.sh/blog/what-are-paymasters">paymaster</a> scheme. Furthermore, the cost incurred by fees on Miden would be small; thanks to <a href="#privacy-scales-better">private scaling</a>.</p>
-<h4 id="additional-features"><a class="header" href="#additional-features">Additional features</a></h4>
-<p>We could imagine additional features which could be added to this type of application:</p>
-<ul>
-<li>Simple DeFi page, aggregating best sources of yield / lending / borrowing from different Miden protocols</li>
-<li>Creation of digital bank cards and integration with Apple / Google Pay</li>
-<li>Creation of physical bank cards (Gnosis card, Crypto.com card, etc.)</li>
-</ul>
-<h3 id="conclusion-1"><a class="header" href="#conclusion-1">Conclusion</a></h3>
-<p>Miden represents a significant leap forward in blockchain-based payment systems, addressing key limitations of existing solutions. By combining privacy, programmability, and scalability, it opens the door to user-friendly applications that could revolutionize how we transact, as presented above.</p>
 
                     </main>
 
