@@ -88,7 +88,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Novel Applications</li><li class="chapter-item expanded "><a href="../../novel_applications/index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Payment</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../novel_applications/payment/private_payment.html"><strong aria-hidden="true">2.1.</strong> Private payment</a></li><li class="chapter-item expanded "><a href="../../novel_applications/payment/1-to-n_private_payment.html" class="active"><strong aria-hidden="true">2.2.</strong> 1-to-n private payment</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Identity</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../novel_applications/identity/miden_name_service.html"><strong aria-hidden="true">3.1.</strong> Miden name service</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Tutorials</li><li class="chapter-item expanded "><a href="../../tutorials/index.html"><strong aria-hidden="true">4.</strong> Philosophy</a></li><li class="chapter-item expanded "><a href="../../tutorials/installation.html"><strong aria-hidden="true">5.</strong> Installation</a></li><li class="chapter-item expanded "><a href="../../tutorials/user/index.html"><strong aria-hidden="true">6.</strong> User Tutorials</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tutorials/user/first_miden_transaction.html"><strong aria-hidden="true">6.1.</strong> Your First Miden Transaction</a></li></ol></li><li class="chapter-item expanded "><a href="../../tutorials/developer/index.html"><strong aria-hidden="true">7.</strong> Developer Tutorials</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tutorials/developer/deploy_faucet.html"><strong aria-hidden="true">7.1.</strong> Deploy a Faucet on Miden</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Novel Applications</li><li class="chapter-item expanded "><a href="../../novel_applications/index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Payment</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../novel_applications/payment/private_payment.html"><strong aria-hidden="true">2.1.</strong> Private payment</a></li><li class="chapter-item expanded "><a href="../../novel_applications/payment/1-to-n_private_payment.html" class="active"><strong aria-hidden="true">2.2.</strong> 1-to-n private payment</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Identity</div></li><li class="chapter-item expanded affix "><li class="part-title">Tutorials</li><li class="chapter-item expanded "><a href="../../tutorials/index.html"><strong aria-hidden="true">4.</strong> Philosophy</a></li><li class="chapter-item expanded "><a href="../../tutorials/installation.html"><strong aria-hidden="true">5.</strong> Installation</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> User</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tutorials/user/first_miden_transaction.html"><strong aria-hidden="true">6.1.</strong> Your First Miden Transaction</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Developer</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../tutorials/developer/deploy_faucet.html"><strong aria-hidden="true">7.1.</strong> Deploy a Faucet on Miden</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -201,7 +201,7 @@
 </ul>
 <p>By maintaining privacy in their financial transactions, companies can operate more effectively in competitive business environments. This privacy does not exist in current payment systems, nor in the classical banking infrastructure, nor in current blockchains. Miden brings a solution to this problem through private transactions.</p>
 <h2 id="how-does-miden-enable-1-to-n-payments"><a class="header" href="#how-does-miden-enable-1-to-n-payments">How Does Miden Enable 1-to-n Payments?</a></h2>
-<p>Through the use of the <a href="https://github.com/0xPolygonMiden/miden-vm">Miden virtual machine</a>, Miden enables the consumption and generation of an arbitrary number of <a href="https://docs.polygon.technology/miden/miden-base/architecture/notes/">notes</a> (artificially constrained). Each of these notes can be used to transition a user's account from a state <code>S</code> to a state <code>S'</code>.</p>
+<p>Miden enables the consumption and generation of an arbitrary number of <a href="https://docs.polygon.technology/miden/miden-base/architecture/notes/">notes</a> (now ~1000 - artificially constrained). Each of these notes can be public or private and be used to transition a user's account from a state <code>S</code> to a state <code>S'</code>.</p>
 <p>We agree on the following initial state:</p>
 <ul>
 <li>There are 11 users, one is Alice</li>
@@ -223,8 +223,7 @@
 </ol>
 <h2 id="an-application-leveraging-1-to-n-payment-on-miden"><a class="header" href="#an-application-leveraging-1-to-n-payment-on-miden">An Application Leveraging 1-to-n Payment on Miden</a></h2>
 <p>Leveraging the primitives mentioned above, we can imagine a powerful 1-to-n payment app that would enable companies of all sizes to manage their payments in an elegant, private, fast, cheap, streamlined way, built on top of Miden's infrastructure.</p>
-<p>Taking inspiration from applications that could leverage 1-to-n payment like <a href="https://www.ticketmaster.com/">TicketMaster</a> or <a href="https://wind.app/developer">Wind</a>, we can imagine a simple and modern dashboard enabling multiple payments at once:</p>
-<!-- Image of imagined application -->
+<p>Taking inspiration from applications that could leverage 1-to-n payment like <a href="https://www.ticketmaster.com/">TicketMaster</a> or <a href="https://wind.app/developer">Wind</a>, we can imagine a simple and modern dashboard enabling multiple payments or document issuance at once.</p>
 <h2 id="conclusion"><a class="header" href="#conclusion">Conclusion</a></h2>
 <p>The introduction of 1-to-n private payments on Miden offers a solution to long-lasting payment challenges faced by corporations and individuals. By providing efficiency, reduced costs, error minimization, privacy, and the ability to consolidate transactions, 1-to-n payments could enhance how individuals and companies manage financial operations.</p>
 
@@ -236,7 +235,7 @@
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next prefetch" href="../../novel_applications/identity/miden_name_service.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../../tutorials/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -250,7 +249,7 @@
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next prefetch" href="../../novel_applications/identity/miden_name_service.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../../tutorials/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

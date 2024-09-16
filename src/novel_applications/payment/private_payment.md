@@ -145,7 +145,7 @@ The first method could be assimilated with a `PUSH` scheme where the source woul
 
 *Question: How would I easily find and interact with my contacts if addresses are a bunch of random characters starting with `0x`?*
 
-To simplify the addition and management of contacts and make the experience more recognizable by web2 users, we could improve the address book of the application by leveraging [Miden name service](../identity/miden_name_service.md). A name service is essential for users to easily find, send and remember contacts (We do not store phone numbers as numbers in our phones, we store them as names, attached is the phone number e.g. Mom -> +123456789).
+To simplify the addition and management of contacts and make the experience more recognizable by web2 users, we could improve the address book of the application by leveraging [Miden name service](). A name service is essential for users to easily find, send and remember contacts (We do not store phone numbers as numbers in our phones, we store them as names, attached is the phone number e.g. Mom -> +123456789).
 
 #### Users need to sign a transaction for each action
 

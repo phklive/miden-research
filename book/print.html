@@ -89,7 +89,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Novel Applications</li><li class="chapter-item expanded "><a href="novel_applications/index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Payment</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="novel_applications/payment/private_payment.html"><strong aria-hidden="true">2.1.</strong> Private payment</a></li><li class="chapter-item expanded "><a href="novel_applications/payment/1-to-n_private_payment.html"><strong aria-hidden="true">2.2.</strong> 1-to-n private payment</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Identity</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="novel_applications/identity/miden_name_service.html"><strong aria-hidden="true">3.1.</strong> Miden name service</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Tutorials</li><li class="chapter-item expanded "><a href="tutorials/index.html"><strong aria-hidden="true">4.</strong> Philosophy</a></li><li class="chapter-item expanded "><a href="tutorials/installation.html"><strong aria-hidden="true">5.</strong> Installation</a></li><li class="chapter-item expanded "><a href="tutorials/user/index.html"><strong aria-hidden="true">6.</strong> User Tutorials</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tutorials/user/first_miden_transaction.html"><strong aria-hidden="true">6.1.</strong> Your First Miden Transaction</a></li></ol></li><li class="chapter-item expanded "><a href="tutorials/developer/index.html"><strong aria-hidden="true">7.</strong> Developer Tutorials</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="tutorials/developer/deploy_faucet.html"><strong aria-hidden="true">7.1.</strong> Deploy a Faucet on Miden</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="introduction.html">Introduction</a></li><li class="chapter-item expanded affix "><li class="part-title">Novel Applications</li><li class="chapter-item expanded "><a href="novel_applications/index.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Payment</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="novel_applications/payment/private_payment.html"><strong aria-hidden="true">2.1.</strong> Private payment</a></li><li class="chapter-item expanded "><a href="novel_applications/payment/1-to-n_private_payment.html"><strong aria-hidden="true">2.2.</strong> 1-to-n private payment</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Identity</div></li><li class="chapter-item expanded affix "><li class="part-title">Tutorials</li><li class="chapter-item expanded "><a href="tutorials/index.html"><strong aria-hidden="true">4.</strong> Philosophy</a></li><li class="chapter-item expanded "><a href="tutorials/installation.html"><strong aria-hidden="true">5.</strong> Installation</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> User</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="tutorials/user/first_miden_transaction.html"><strong aria-hidden="true">6.1.</strong> Your First Miden Transaction</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> Developer</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="tutorials/developer/deploy_faucet.html"><strong aria-hidden="true">7.1.</strong> Deploy a Faucet on Miden</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
@@ -175,6 +175,7 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
+<p><img src="./assets/images/miden_research.jpeg" alt="Miden research logo" /></p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="novel-applications"><a class="header" href="#novel-applications">Novel Applications</a></h1>
 <p>Leveraging Miden's novel architecture opens the door to a plethora of innovative applications that were previously impossible on Ethereum or other EVM-based blockchains. In this discussion, we aim to list different proofs of concept (PoC's) for such applications.</p>
 <p><img src="novel_applications/../assets/images/novel_ideas.jpeg" alt="Novel applications" /></p>
@@ -209,13 +210,16 @@
 <p>Efficient payments are the economic backbone of human societies. They enable the exchange of value for goods and services, facilitate social functioning (e.g., participating in activities like dining out), and support financial interactions.</p>
 <p>Since the inception of Bitcoin, the first blockchain, payments have been the flagship use case. With further developments like Ethereum, alternative L1s (Polygon, Tron, Celo, BNB), and innovations like rollups (Base, Starknet, Scroll), payments have become faster and cheaper.</p>
 <p>The lowered transaction fees offered by these alternative chains make them more suitable for routine, person-to-person payments and small-scale commercial transactions. This "real-world" adoption is evident from <a href="https://app.artemisanalytics.com/stablecoins?chain=all&amp;stablecoinMetric=STABLECOIN_MC">data on stablecoin usage across these chains</a>. The term "real world" in this context refers primarily to user-to-user transfers, as opposed to institutional transactions. This interpretation is supported by the notably lower average transaction sizes compared to Ethereum (~$15 vs ~$100k).</p>
-<p>While blockchains have largely solved the problems of high gas fees and slow execution/finality through the introduction of alternative layer-1 and layer-2 solutions, two critical issues continue to prevent mass adoption:</p>
+<p>While blockchains have vastly improved through the introduction of alternative layer-1 and layer-2 solutions, three critical issues continue to prevent mass adoption:</p>
 <ol>
 <li>
-<p><strong>User Experience (UI/UX)</strong>: Despite technological advancements, many blockchain applications still suffer from poor UI/UX design. The complexity of interacting with blockchain systems remains a significant barrier for non-technical users, often involving confusing wallet interfaces, complicated address systems, sensitive seed phrases and unintuitive transaction processes.</p>
+<p><strong>scalability</strong>: Despite technological advancements, many blockchains remain to slow and expensive to use at scale.</p>
 </li>
 <li>
 <p><strong>Privacy</strong>: Most blockchain networks still operate on a public ledger system, where all transactions are visible and traceable. The lack of built-in privacy features means that financial transactions lack the confidentiality that users expect from financial systems. This transparency, while beneficial for some use cases, poses significant concerns for personal and business transactions that require discretion.</p>
+</li>
+<li>
+<p><strong>User Experience (UI/UX)</strong>: Blockchain applications still suffer from poor UI/UX design. The complexity of interacting with blockchain systems remains a significant barrier for non-technical users, often involving confusing wallet interfaces, complicated address systems, sensitive seed phrases and unintuitive transaction processes.</p>
 </li>
 </ol>
 <p>These issues have prevented blockchains from acquiring the role of leading payment infrastructure and forced users to continue relying on classical centralized infrastructures (e.g., Visa, Mastercard, PayPal, Venmo, Revolut, banks, etc.).</p>
@@ -223,7 +227,7 @@
 <p>While decentralized privacy-preserving protocols like <a href="https://z.cash">Zcash</a> and <a href="https://getmonero.org">Monero</a> exist, they face significant limitations. These systems lack stable assets, exclusively using their native tokens (ZEC and XMR), which prevents the use of widely adopted stablecoins like USDC or USDT. This absence of stable, pegged currencies hinders real-world transactions and broad adoption. Additionally, their transaction fees (Zcash: $0.023, Monero: $0.061), while seemingly low, are still too high to compete effectively with traditional payment systems or newer blockchain solutions.</p>
 <p>Miden solves these issues.</p>
 <h2 id="miden-an-improved-payment-infrastructure"><a class="header" href="#miden-an-improved-payment-infrastructure">Miden: an improved payment infrastructure</a></h2>
-<p>Given the limitations of existing blockchains and payments infrastructure, both public and privacy-focused, there is a clear need for a solution that combines privacy, efficiency, and functionality. This is where Miden enters the picture. By building on the foundational work around privacy of projects like Zcash and Monero and around computation of a project like Ethereum, while also incorporating lessons learned from scalable solutions like rollups, Miden presents a promising approach towards building a more ideal payments infrastructure:</p>
+<p>Given the limitations of existing blockchains and payments infrastructure, both public and privacy-focused, there is a clear need for a solution that combines scalability, privacy, and functionality. This is where Miden enters the picture. By building on the foundational work around privacy of projects like Zcash and Monero and around computation of a project like Ethereum, while also incorporating lessons learned from scalable solutions like rollups, Miden presents a promising approach towards building a more ideal payments infrastructure:</p>
 <div class="table-wrapper"><table><thead><tr><th>Aspect</th><th>Current Systems</th><th>Miden</th></tr></thead><tbody>
 <tr><td>Network Structure</td><td>Centralized</td><td>Decentralized (On the roadmap)</td></tr>
 <tr><td>Asset Support</td><td>Lack of stable assets</td><td>Arbitrary assets</td></tr>
@@ -240,7 +244,7 @@
 <ul>
 <li>There are 2 users, Alice and Bob</li>
 <li>Alice owns 1 Ether, Bob owns no assets</li>
-<li>Alice wants to send her 1 Ether to Bob</li>
+<li>Alice wants to send 1 Ether to Bob</li>
 <li>Alice and Bob want to remain private</li>
 </ul>
 <p>To do so, the following scheme can be applied:</p>
@@ -249,7 +253,7 @@
 <p>Alice transitions her state from a state <code>S</code> where she has <code>1 Ether</code> to a state <code>S'</code> where she has <code>0 Ether</code>, transferring the asset into a <code>Note</code> using the <a href="https://github.com/0xPolygonMiden/miden-base/blob/main/miden-lib/asm/note_scripts/P2ID.masm">P2ID script</a>.</p>
 </li>
 <li>
-<p>Alice transfers this <code>Note</code> containing the asset to Bob using a private arbitrary solution (On-chain encrypted notes (on the roadmap), Telegram, Signal, etc.).</p>
+<p>Alice transfers this <code>Note</code> containing the asset to Bob using arbitrary solutions (Signal, E-mail, On-chain encrypted notes (on the roadmap)).</p>
 </li>
 <li>
 <p>Bob receives the <code>Note</code> and transitions his state from <code>S</code> where he has <code>0 Ether</code> to a state <code>S'</code> where he has <code>1 Ether</code>, consuming the <code>1 Ether</code> placed into the <code>Note</code> by Alice into his state.</p>
@@ -287,14 +291,11 @@
 <p>We clearly understand here that Ethereum has made the choice to separate user accounts from executable code. What if we could merge both to enable programmable user accounts? Welcoming <code>Account abstraction</code>, which can be defined as follows:</p>
 <p>"Account abstraction is a method of setting up a blockchain network in which users' assets are stored exclusively in smart contracts, and not in external accounts (External Owned Accounts, EOAs). When using this approach, a crypto wallet turns into a unique smart contract that can be programmed for various purposes."</p>
 <p><a href="https://medium.com/@alex-100/what-is-account-abstraction-and-why-is-it-important-9627a4ced4f3">What is account abstraction and why is it important - Medium - Aleksander</a></p>
-<p>Miden supports full account abstraction, enabling full programmability of user accounts defined as follows:</p>
-<p align="center">
-    <img src="novel_applications/payment/../../assets/images/account.png" width="40%" alt="Account definition">
-</p>
+<p>Miden supports full account abstraction, enabling full programmability of user <a href="https://docs.polygon.technology/miden/miden-base/architecture/accounts/">accounts</a>.</p>
 <p>The <code>Miden VM code</code> field hints that all Miden accounts are <code>abstracted</code>, which enables arbitrary logic to be executed against them, opening the door to unbounded functionalities. Using these innovations, we can imagine improvements in UX like social recovery, abstracted seed phrases, Face-ID signing, and many more.</p>
 <h4 id="making-private-transfers"><a class="header" href="#making-private-transfers">Making private transfers</a></h4>
 <p><em>Question: How can the application developer use Miden to make private transfers?</em></p>
-<p>Using the <a href="https://www.npmjs.com/package/@demox-labs/miden-sdk?activeTab=readme">Miden SDK</a> or the <a href="https://github.com/0xPolygonMiden/miden-client">Miden client</a>, an application developer can import Miden core components into their application, enabling them to create accounts, use the <a href="https://github.com/0xPolygonMiden/miden-vm">Miden VM</a> to make state transitions (transactions) and generate notes, <a href="https://github.com/facebook/winterfell">Miden prover</a> to make proofs and preserve privacy, and more.</p>
+<p>Using the <a href="https://www.npmjs.com/package/@demox-labs/miden-sdk?activeTab=readme">Miden SDK</a> or the <a href="https://github.com/0xPolygonMiden/miden-client">Miden client</a>, an application developer can import Miden core components into their application, enabling them to create accounts, execute code against their accounts to transition their state (which we call a <a href="https://docs.polygon.technology/miden/miden-base/architecture/transactions/overview/">transaction</a>), generate notes, and more.</p>
 <h4 id="account-storage"><a class="header" href="#account-storage">Account storage</a></h4>
 <p><em>Question: Where and how would I store my account?</em></p>
 <p>The user account, assets and private key would be stored securely on device. For additional redundancy, we could add social recovery solutions, storage of an encrypted account state in the cloud, and more.</p>
@@ -316,7 +317,7 @@
 <p>The first method could be assimilated with a <code>PUSH</code> scheme where the source would send their notes to the relayer and the relayer would send those notes to the intended target. The second method could be assimilated as a <code>PULL</code> scheme where the source would encrypt notes and send them to the Miden rollup. The application would then need to filter existing notes from the rollup notes tree and consume relevant notes for the target user (which could be done on action or time basis).</p>
 <h4 id="miden-name-service"><a class="header" href="#miden-name-service">Miden name service</a></h4>
 <p><em>Question: How would I easily find and interact with my contacts if addresses are a bunch of random characters starting with <code>0x</code>?</em></p>
-<p>To simplify the addition and management of contacts and make the experience more recognizable by web2 users, we could improve the address book of the application by leveraging <a href="novel_applications/payment/../identity/miden_name_service.html">Miden name service</a>. A name service is essential for users to easily find, send and remember contacts (We do not store phone numbers as numbers in our phones, we store them as names, attached is the phone number e.g. Mom -&gt; +123456789).</p>
+<p>To simplify the addition and management of contacts and make the experience more recognizable by web2 users, we could improve the address book of the application by leveraging <a href="novel_applications/payment/">Miden name service</a>. A name service is essential for users to easily find, send and remember contacts (We do not store phone numbers as numbers in our phones, we store them as names, attached is the phone number e.g. Mom -&gt; +123456789).</p>
 <h4 id="users-need-to-sign-a-transaction-for-each-action"><a class="header" href="#users-need-to-sign-a-transaction-for-each-action">Users need to sign a transaction for each action</a></h4>
 <p><em>Question: Wouldn't I have a bad experience needing to sign each and every action I make inside the application?</em></p>
 <p>Most web3 apps forced their users to sign a transaction for each of their actions because each state update of a blockchain requires a valid account signature. We can solve this using these two solutions:</p>
@@ -356,7 +357,7 @@
 </ul>
 <p>By maintaining privacy in their financial transactions, companies can operate more effectively in competitive business environments. This privacy does not exist in current payment systems, nor in the classical banking infrastructure, nor in current blockchains. Miden brings a solution to this problem through private transactions.</p>
 <h2 id="how-does-miden-enable-1-to-n-payments"><a class="header" href="#how-does-miden-enable-1-to-n-payments">How Does Miden Enable 1-to-n Payments?</a></h2>
-<p>Through the use of the <a href="https://github.com/0xPolygonMiden/miden-vm">Miden virtual machine</a>, Miden enables the consumption and generation of an arbitrary number of <a href="https://docs.polygon.technology/miden/miden-base/architecture/notes/">notes</a> (artificially constrained). Each of these notes can be used to transition a user's account from a state <code>S</code> to a state <code>S'</code>.</p>
+<p>Miden enables the consumption and generation of an arbitrary number of <a href="https://docs.polygon.technology/miden/miden-base/architecture/notes/">notes</a> (now ~1000 - artificially constrained). Each of these notes can be public or private and be used to transition a user's account from a state <code>S</code> to a state <code>S'</code>.</p>
 <p>We agree on the following initial state:</p>
 <ul>
 <li>There are 11 users, one is Alice</li>
@@ -378,11 +379,9 @@
 </ol>
 <h2 id="an-application-leveraging-1-to-n-payment-on-miden"><a class="header" href="#an-application-leveraging-1-to-n-payment-on-miden">An Application Leveraging 1-to-n Payment on Miden</a></h2>
 <p>Leveraging the primitives mentioned above, we can imagine a powerful 1-to-n payment app that would enable companies of all sizes to manage their payments in an elegant, private, fast, cheap, streamlined way, built on top of Miden's infrastructure.</p>
-<p>Taking inspiration from applications that could leverage 1-to-n payment like <a href="https://www.ticketmaster.com/">TicketMaster</a> or <a href="https://wind.app/developer">Wind</a>, we can imagine a simple and modern dashboard enabling multiple payments at once:</p>
-<!-- Image of imagined application -->
+<p>Taking inspiration from applications that could leverage 1-to-n payment like <a href="https://www.ticketmaster.com/">TicketMaster</a> or <a href="https://wind.app/developer">Wind</a>, we can imagine a simple and modern dashboard enabling multiple payments or document issuance at once.</p>
 <h2 id="conclusion-1"><a class="header" href="#conclusion-1">Conclusion</a></h2>
 <p>The introduction of 1-to-n private payments on Miden offers a solution to long-lasting payment challenges faced by corporations and individuals. By providing efficiency, reduced costs, error minimization, privacy, and the ability to consolidate transactions, 1-to-n payments could enhance how individuals and companies manage financial operations.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="miden-name-service-1"><a class="header" href="#miden-name-service-1">Miden name service</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="tutorials"><a class="header" href="#tutorials">Tutorials</a></h1>
 <p>Our tutorials help users and developers get accustomed with the usage of the Miden protocol. Following is our philosophy around tutorial building.</p>
 <h2 id="why-build-tutorials"><a class="header" href="#why-build-tutorials">Why build tutorials?</a></h2>
@@ -465,9 +464,7 @@
 </ol>
 <p>Using these heuristics and processes, we can start building and continuously improving compelling tutorials, maximizing the reach and acquisition of both Miden targets, i.e., protocol users and developers.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="installation"><a class="header" href="#installation">installation</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="user-tutorials"><a class="header" href="#user-tutorials">User Tutorials</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="your-first-miden-transaction"><a class="header" href="#your-first-miden-transaction">Your First Miden Transaction</a></h1>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="developer-tutorials"><a class="header" href="#developer-tutorials">Developer Tutorials</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="deploy-a-faucet-on-miden"><a class="header" href="#deploy-a-faucet-on-miden">Deploy a Faucet on Miden</a></h1>
 
                     </main>
