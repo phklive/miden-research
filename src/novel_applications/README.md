@@ -23,8 +23,8 @@ Leveraging Miden's novel architecture opens the door to a plethora of innovative
 
 - [Identity proofs]()
 - [Miden name service]()
-- [ZK KYC]()
 
 ### Compliance
 
 - [Private provable compliance]()
+- [ZK KYC]()
