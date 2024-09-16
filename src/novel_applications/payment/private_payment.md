@@ -10,11 +10,13 @@ Since the inception of Bitcoin, the first blockchain, payments have been the fla
 
 The lowered transaction fees offered by these alternative chains make them more suitable for routine, person-to-person payments and small-scale commercial transactions. This "real-world" adoption is evident from [data on stablecoin usage across these chains](https://app.artemisanalytics.com/stablecoins?chain=all&stablecoinMetric=STABLECOIN_MC). The term "real world" in this context refers primarily to user-to-user transfers, as opposed to institutional transactions. This interpretation is supported by the notably lower average transaction sizes compared to Ethereum (~$15 vs ~$100k).
 
-While blockchains have largely solved the problems of high gas fees and slow execution/finality through the introduction of alternative layer-1 and layer-2 solutions, two critical issues continue to prevent mass adoption:
+While blockchains have vastly improved through the introduction of alternative layer-1 and layer-2 solutions, three critical issues continue to prevent mass adoption:
 
-1. **User Experience (UI/UX)**: Despite technological advancements, many blockchain applications still suffer from poor UI/UX design. The complexity of interacting with blockchain systems remains a significant barrier for non-technical users, often involving confusing wallet interfaces, complicated address systems, sensitive seed phrases and unintuitive transaction processes.
+1. **scalability**: Despite technological advancements, many blockchains remain to slow and expensive to use at scale.
 
 2. **Privacy**: Most blockchain networks still operate on a public ledger system, where all transactions are visible and traceable. The lack of built-in privacy features means that financial transactions lack the confidentiality that users expect from financial systems. This transparency, while beneficial for some use cases, poses significant concerns for personal and business transactions that require discretion.
+
+3. **User Experience (UI/UX)**: Blockchain applications still suffer from poor UI/UX design. The complexity of interacting with blockchain systems remains a significant barrier for non-technical users, often involving confusing wallet interfaces, complicated address systems, sensitive seed phrases and unintuitive transaction processes.
 
 These issues have prevented blockchains from acquiring the role of leading payment infrastructure and forced users to continue relying on classical centralized infrastructures (e.g., Visa, Mastercard, PayPal, Venmo, Revolut, banks, etc.).
 
@@ -26,7 +28,7 @@ Miden solves these issues.
 
 ## Miden: an improved payment infrastructure
 
-Given the limitations of existing blockchains and payments infrastructure, both public and privacy-focused, there is a clear need for a solution that combines privacy, efficiency, and functionality. This is where Miden enters the picture. By building on the foundational work around privacy of projects like Zcash and Monero and around computation of a project like Ethereum, while also incorporating lessons learned from scalable solutions like rollups, Miden presents a promising approach towards building a more ideal payments infrastructure:
+Given the limitations of existing blockchains and payments infrastructure, both public and privacy-focused, there is a clear need for a solution that combines scalability, privacy, and functionality. This is where Miden enters the picture. By building on the foundational work around privacy of projects like Zcash and Monero and around computation of a project like Ethereum, while also incorporating lessons learned from scalable solutions like rollups, Miden presents a promising approach towards building a more ideal payments infrastructure:
 
 | Aspect | Current Systems | Miden |
 |--------|-----------------|-------|
@@ -47,14 +49,14 @@ We agree on the following initial state:
 
 - There are 2 users, Alice and Bob
 - Alice owns 1 Ether, Bob owns no assets
-- Alice wants to send her 1 Ether to Bob
+- Alice wants to send 1 Ether to Bob
 - Alice and Bob want to remain private
 
 To do so, the following scheme can be applied:
 
 1. Alice transitions her state from a state `S` where she has `1 Ether` to a state `S'` where she has `0 Ether`, transferring the asset into a `Note` using the [P2ID script](https://github.com/0xPolygonMiden/miden-base/blob/main/miden-lib/asm/note_scripts/P2ID.masm).
 
-2. Alice transfers this `Note` containing the asset to Bob using a private arbitrary solution (On-chain encrypted notes (on the roadmap), Telegram, Signal, etc.).
+2. Alice transfers this `Note` containing the asset to Bob using arbitrary solutions (Signal, E-mail, On-chain encrypted notes (on the roadmap)).
 
 3. Bob receives the `Note` and transitions his state from `S` where he has `0 Ether` to a state `S'` where he has `1 Ether`, consuming the `1 Ether` placed into the `Note` by Alice into his state.
 
@@ -101,11 +103,7 @@ We clearly understand here that Ethereum has made the choice to separate user ac
 
 [What is account abstraction and why is it important - Medium - Aleksander](https://medium.com/@alex-100/what-is-account-abstraction-and-why-is-it-important-9627a4ced4f3)
 
-Miden supports full account abstraction, enabling full programmability of user accounts defined as follows:
-
-<p align="center">
-    <img src="../../assets/images/account.png" width="40%" alt="Account definition">
-</p>
+Miden supports full account abstraction, enabling full programmability of user [accounts](https://docs.polygon.technology/miden/miden-base/architecture/accounts/).
 
 The `Miden VM code` field hints that all Miden accounts are `abstracted`, which enables arbitrary logic to be executed against them, opening the door to unbounded functionalities. Using these innovations, we can imagine improvements in UX like social recovery, abstracted seed phrases, Face-ID signing, and many more.
 
@@ -113,7 +111,7 @@ The `Miden VM code` field hints that all Miden accounts are `abstracted`, which 
 
 *Question: How can the application developer use Miden to make private transfers?*
 
-Using the [Miden SDK](https://www.npmjs.com/package/@demox-labs/miden-sdk?activeTab=readme) or the [Miden client](https://github.com/0xPolygonMiden/miden-client), an application developer can import Miden core components into their application, enabling them to create accounts, use the [Miden VM](https://github.com/0xPolygonMiden/miden-vm) to make state transitions (transactions) and generate notes, [Miden prover](https://github.com/facebook/winterfell) to make proofs and preserve privacy, and more.
+Using the [Miden SDK](https://www.npmjs.com/package/@demox-labs/miden-sdk?activeTab=readme) or the [Miden client](https://github.com/0xPolygonMiden/miden-client), an application developer can import Miden core components into their application, enabling them to create accounts, execute code against their accounts to transition their state (which we call a [transaction](https://docs.polygon.technology/miden/miden-base/architecture/transactions/overview/)), generate notes, and more.
 
 #### Account storage
 
