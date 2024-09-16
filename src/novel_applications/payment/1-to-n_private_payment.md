@@ -4,10 +4,10 @@
 
 ## What is 1-to-n private payment and why is it powerful?
 
-1-to-n [private payment](./private_payment.md) is a powerful primitive enabling:
+1-to-n private payment is a powerful primitive enabling:
 
 - Consolidation of multiple payments in **ONE SINGLE TRANSACTION**
-- Increased privacy for all involved parties
+- Increased privacy for all involved parties ([learn more.](./private_payment.md) about private payments)
 - Reduced processing time
 - Reduced complexity of tasks and possibility of errors
 - Reduced administrative costs
