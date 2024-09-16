@@ -1,4 +1,4 @@
-![Miden research logo](./assets/images/miden_research.jpeg)
+![Miden research logo](./src/assets/images/miden_research.jpeg)
 
 # Miden Research
 
