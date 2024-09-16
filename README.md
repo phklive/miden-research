@@ -1,7 +1,5 @@
 ![Miden research logo](./src/assets/images/miden_research.jpeg)
 
-# Miden Research
-
 This mdbook aims to provide insights into the future of the Miden protocol.
 
 ## Live website
