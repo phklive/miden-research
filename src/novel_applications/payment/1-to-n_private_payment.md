@@ -38,7 +38,7 @@ By maintaining privacy in their financial transactions, companies can operate mo
 
 ## How Does Miden Enable 1-to-n Payments?
 
-Through the use of the [Miden virtual machine](https://github.com/0xPolygonMiden/miden-vm), Miden enables the consumption and generation of an arbitrary number of [notes](https://docs.polygon.technology/miden/miden-base/architecture/notes/) (artificially constrained). Each of these notes can be used to transition a user's account from a state `S` to a state `S'`.
+Miden enables the consumption and generation of an arbitrary number of [notes](https://docs.polygon.technology/miden/miden-base/architecture/notes/) (now ~1000 - artificially constrained). Each of these notes can be public or private and be used to transition a user's account from a state `S` to a state `S'`.
 
 We agree on the following initial state:
 
@@ -59,9 +59,7 @@ The process works as follows:
 
 Leveraging the primitives mentioned above, we can imagine a powerful 1-to-n payment app that would enable companies of all sizes to manage their payments in an elegant, private, fast, cheap, streamlined way, built on top of Miden's infrastructure.
 
-Taking inspiration from applications that could leverage 1-to-n payment like [TicketMaster](https://www.ticketmaster.com/) or [Wind](https://wind.app/developer), we can imagine a simple and modern dashboard enabling multiple payments at once:
-
-<!-- Image of imagined application -->
+Taking inspiration from applications that could leverage 1-to-n payment like [TicketMaster](https://www.ticketmaster.com/) or [Wind](https://wind.app/developer), we can imagine a simple and modern dashboard enabling multiple payments or document issuance at once.
 
 ## Conclusion
 
