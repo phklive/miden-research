@@ -1,6 +1,6 @@
-# Miden Research
+![Miden research logo](./src/assets/images/miden_research.jpeg)
 
-This repository contains an mdbook on Miden research. The book aims to provide insights into the future of the Miden protocol.
+This mdbook aims to provide insights into the future of the Miden protocol.
 
 ## Live website
 
