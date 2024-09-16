@@ -2,11 +2,11 @@
 
 ![1-to-n private payment](../../assets/images/1-to-n_private_payment.png)
 
-## What is 1-to-n Payment and Why is it Powerful?
+## What is 1-to-n private payment and why is it powerful?
 
-1-to-n private payment is a powerful primitive enabling:
+1-to-n [private payment](./private_payment.md) is a powerful primitive enabling:
 
-- Consolidation of multiple payments in a single transaction
+- Consolidation of multiple payments in **ONE SINGLE TRANSACTION**
 - Increased privacy for all involved parties
 - Reduced processing time
 - Reduced complexity of tasks and possibility of errors
@@ -15,26 +15,6 @@
 The use cases for 1-to-n payments are diverse, encompassing a wide range of financial operations. These include user payments, large-scale corporation payrolls, and document, ticket, and NFT issuance, among others.
 
 1-to-n payment would enable actors from individual users to large corporations to benefit from a better payment primitive.
-
-### 1-to-n Payments for Companies
-
-Historically, companies have struggled with payroll management, especially as they scale. As organizations grow to encompass hundreds or thousands of employees, suppliers, and partners, managing numerous payments becomes increasingly complex and expensive. Traditional methods, whether manual or automated, often result in time-consuming processes, higher error rates, and significant administrative costs.
-
-1-to-n payments offer a solution for companies of all sizes. Using Miden, businesses can now fulfill **ALL** of their required payments in **ONE SINGLE TRANSACTION**. This approach eliminates the need for individual transfers, dramatically reducing processing time, minimizing errors, and cutting transaction costs.
-
-### Private Payments for Companies
-
-Private payments are not just essential in human societies, [learn more](./private_payment.md); they are crucial for the functioning of modern businesses. While individuals value financial privacy, companies depend on it for their survival and growth in competitive markets.
-
-Companies rely on private payments for several reasons, which include:
-
-- Maintaining competitive advantages by keeping financial strategies confidential
-- Protecting intellectual property related to research and development investments
-- Ensuring market stability by preventing unintended reactions to large transactions
-- Payment of employees, suppliers, and partners
-- And many more
-
-By maintaining privacy in their financial transactions, companies can operate more effectively in competitive business environments. This privacy does not exist in current payment systems, nor in the classical banking infrastructure, nor in current blockchains. Miden brings a solution to this problem through private transactions.
 
 ## How Does Miden Enable 1-to-n Payments?
 

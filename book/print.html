@@ -332,10 +332,10 @@
 <p>Miden's account abstraction solves this by enabling application developers to subsidize gas costs for their users through a <a href="https://www.stackup.sh/blog/what-are-paymasters">paymaster</a> scheme. Furthermore, the cost incurred by fees on Miden would be small; thanks to <a href="novel_applications/payment/private_payment.html#privacy-scales-better">private scaling</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="1-to-n-private-payment"><a class="header" href="#1-to-n-private-payment">1-to-n Private Payment</a></h1>
 <p><img src="novel_applications/payment/../../assets/images/1-to-n_private_payment.png" alt="1-to-n private payment" /></p>
-<h2 id="what-is-1-to-n-payment-and-why-is-it-powerful"><a class="header" href="#what-is-1-to-n-payment-and-why-is-it-powerful">What is 1-to-n Payment and Why is it Powerful?</a></h2>
-<p>1-to-n private payment is a powerful primitive enabling:</p>
+<h2 id="what-is-1-to-n-private-payment-and-why-is-it-powerful"><a class="header" href="#what-is-1-to-n-private-payment-and-why-is-it-powerful">What is 1-to-n private payment and why is it powerful?</a></h2>
+<p>1-to-n <a href="novel_applications/payment/./private_payment.html">private payment</a> is a powerful primitive enabling:</p>
 <ul>
-<li>Consolidation of multiple payments in a single transaction</li>
+<li>Consolidation of multiple payments in <strong>ONE SINGLE TRANSACTION</strong></li>
 <li>Increased privacy for all involved parties</li>
 <li>Reduced processing time</li>
 <li>Reduced complexity of tasks and possibility of errors</li>
@@ -343,20 +343,6 @@
 </ul>
 <p>The use cases for 1-to-n payments are diverse, encompassing a wide range of financial operations. These include user payments, large-scale corporation payrolls, and document, ticket, and NFT issuance, among others.</p>
 <p>1-to-n payment would enable actors from individual users to large corporations to benefit from a better payment primitive.</p>
-<h3 id="1-to-n-payments-for-companies"><a class="header" href="#1-to-n-payments-for-companies">1-to-n Payments for Companies</a></h3>
-<p>Historically, companies have struggled with payroll management, especially as they scale. As organizations grow to encompass hundreds or thousands of employees, suppliers, and partners, managing numerous payments becomes increasingly complex and expensive. Traditional methods, whether manual or automated, often result in time-consuming processes, higher error rates, and significant administrative costs.</p>
-<p>1-to-n payments offer a solution for companies of all sizes. Using Miden, businesses can now fulfill <strong>ALL</strong> of their required payments in <strong>ONE SINGLE TRANSACTION</strong>. This approach eliminates the need for individual transfers, dramatically reducing processing time, minimizing errors, and cutting transaction costs.</p>
-<h3 id="private-payments-for-companies"><a class="header" href="#private-payments-for-companies">Private Payments for Companies</a></h3>
-<p>Private payments are not just essential in human societies, <a href="novel_applications/payment/./private_payment.html">learn more</a>; they are crucial for the functioning of modern businesses. While individuals value financial privacy, companies depend on it for their survival and growth in competitive markets.</p>
-<p>Companies rely on private payments for several reasons, which include:</p>
-<ul>
-<li>Maintaining competitive advantages by keeping financial strategies confidential</li>
-<li>Protecting intellectual property related to research and development investments</li>
-<li>Ensuring market stability by preventing unintended reactions to large transactions</li>
-<li>Payment of employees, suppliers, and partners</li>
-<li>And many more</li>
-</ul>
-<p>By maintaining privacy in their financial transactions, companies can operate more effectively in competitive business environments. This privacy does not exist in current payment systems, nor in the classical banking infrastructure, nor in current blockchains. Miden brings a solution to this problem through private transactions.</p>
 <h2 id="how-does-miden-enable-1-to-n-payments"><a class="header" href="#how-does-miden-enable-1-to-n-payments">How Does Miden Enable 1-to-n Payments?</a></h2>
 <p>Miden enables the consumption and generation of an arbitrary number of <a href="https://docs.polygon.technology/miden/miden-base/architecture/notes/">notes</a> (now ~1000 - artificially constrained). Each of these notes can be public or private and be used to transition a user's account from a state <code>S</code> to a state <code>S'</code>.</p>
 <p>We agree on the following initial state:</p>
