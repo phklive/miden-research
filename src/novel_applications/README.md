@@ -4,10 +4,10 @@ Leveraging Miden's novel architecture opens the door to a plethora of innovative
 
 ![Novel applications](../assets/images/novel_ideas.jpeg)
 
-### Payments
+### Payment
 
-- [Private parallel payment]()
-- [n-1 payments]()
+- [Private payment](./payment/private_payment.md)
+- [n-1 payment]()
 
 ### Defi
 
@@ -22,6 +22,7 @@ Leveraging Miden's novel architecture opens the door to a plethora of innovative
 ### Identity
 
 - [Identity proofs]()
+- [Miden name service]()
 - [ZK KYC]()
 
 ### Compliance

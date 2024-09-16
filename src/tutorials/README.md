@@ -1,5 +1,7 @@
 # Tutorials
 
+Our tutorials help users and developers get accustomed with the usage of the Miden protocol. Following is our philosophy around tutorial building.
+
 ## Why build tutorials?
 
 Tutorials enable the fast transfer of knowledge from one group of individuals to another. In our case, from the Miden core developers to potential users or contributors/developers. Tutorials, if done correctly, can be an effective way to speed up the onboarding of target audiences and foster ecosystem growth. On the other hand, tutorials, if poorly realized, can be a source of frustration and lead to loss of target audience.
