@@ -11,8 +11,8 @@ Leveraging Miden's novel architecture opens the door to a plethora of innovative
 
 ### Defi
 
-- [Private on-chain order book](https://github.com/0xPolygonMiden/examples/discussions/138)
-- [Private Perpetual market](./defi/perp.md)
+- [Private order book](./defi/clob.md)
+- [Private perpetual market](./defi/perp.md)
 
 ### Gaming
 
